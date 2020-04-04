@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 
+using namespace std;
+
 int getRevseOrders(int num[], int len)
 {
 
@@ -22,5 +24,5 @@ void test()
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	cout << "Hello World!" << endl;
 }
