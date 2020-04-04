@@ -30,10 +30,10 @@ void test()
 	int num1[] = { 1, 3 , 4 , 7,  2 };
 	int num2[] = { 9, 8, 7, 6, 5 };
 	printPairs(num1, 5);
-	cout << getRevseOrders(num1, 5) << endl;
+	cout << "逆序数是：" << getRevseOrders(num1, 5) << endl;
 
 	printPairs(num2, 5);
-	cout << getRevseOrders(num2, 5) << endl;
+	cout << "逆序数是：" << getRevseOrders(num2, 5) << endl;
 	// task  
 	// 1. print out all pairs 
 	// 2 . compute reverse orders 
