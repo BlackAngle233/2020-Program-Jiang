@@ -1,14 +1,21 @@
 ﻿#include <iostream>
+using namespace std;
 
 int getRevseOrders(int num[], int len)
 {
-
+	int sum{0};
+	for(int i = 0;i<len;i++)
+	{
+		for(int j =i+1;j<len;j++)
+		{
+			cout<<'('<<num[i]<<','<<num[j]<<')'<<' ';
+			if(num[i]>num[j])sum++;
+		}
+	}
+	cout<<endl;
+		return sum;
 }
 
-void printPairs(int num[], int len)
-{
-
-}
 
 void test()
 {
@@ -17,9 +24,11 @@ void test()
 	// task  
 	// 1. print out all pairs 
 	// 2 . compute reverse orders 
+	cout<<getRevseOrders(num1,5)<<'\n'<<getRevseOrders(num2,5)<<endl;
 }
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    test();
+	return 0;
 }
