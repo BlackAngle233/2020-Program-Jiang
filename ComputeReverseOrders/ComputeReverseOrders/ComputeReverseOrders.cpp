@@ -7,7 +7,7 @@ int getRevseOrders(int num[], int len)
 
 void printPairs(int num[], int len)
 {
-
+	int i = 0;
 }
 
 void test()
