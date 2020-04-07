@@ -19,6 +19,9 @@ int getRevseOrders(int num[], int len)
 
 void printPairs(int num[], int len)
 {
+	if (len < 2) {
+		return;
+	}
 	for (int i = 0; i < len - 1; i++) {
 		for (int j = i + 1; j < len; j++) {
 			if (num[i] > num[j]) {
