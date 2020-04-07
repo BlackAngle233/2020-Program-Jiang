@@ -2,21 +2,21 @@
 using namespace std;
 
 int getRevseOrders(int num[], int len) {
-	int revseOrders = 0;
+	int count = 0;
 	for (int i = 0; i < len - 1; i++) {
 		for (int j = i + 1; j < len; j++) {
 			if (num[i] > num[j]) {
-				revseOrders++;
+				count++;
 			}
 		}
 	}
-	return revseOrders;
+	return count;
 }
 
 
 void printPairs(int num[],int len)
 {
-	
+	cout << "该数组的所有序列对为: ";
 	for (int i = 0; i < len-1; i++) {
 		for (int j = i+1; j < len; j++) {
 			cout << "(" << num[i] << "," <<num[j] <<")  ";
