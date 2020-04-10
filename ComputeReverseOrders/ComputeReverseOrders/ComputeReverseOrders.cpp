@@ -1,13 +1,25 @@
 ﻿#include <iostream>
 
+using namespace std;
+
 int getRevseOrders(int num[], int len)
 {
-
+	int r = 0;//reverse orders
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			if (num[i] < num[j])
+				r++;
+		}
+	}
 }
 
 void printPairs(int num[], int len)
 {
-
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			cout << "<" << num[i] << "," << num[j] << ">" << endl;
+		}
+	}
 }
 
 void test()
@@ -22,5 +34,8 @@ void test()
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	test();
+	printPairs(num1, 5);
+	getRevseOrders(num2, 5);
+	return 0;
 }
