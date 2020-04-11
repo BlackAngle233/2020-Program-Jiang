@@ -33,7 +33,7 @@ void minus(int m1[4][4], int m2[4][4]) {
 	printMartix4x4(result);
 }
 
-void dot(int m1[4][4], int m2[4][4]) {
+void multiple(int m1[4][4], int m2[4][4]) {
 	int result[4][4];
 
 	printMartix4x4(result);
