@@ -3,15 +3,18 @@
 
 void test() 
 {
-	int a[4][4];
-	inputMartix4x4(a);
-	printMartix4x4(a);
+	Matrix test;
+    test.setNums();
+    Matrix a;
+    a.setNums();
+    Matrix ans;
+    ans=a*test;
+	cout<<"Answer is:"<<endl;
+    ans.printNums();
 }
 
 int main()
 {
     std::cout << "test:\n";
 	test();
-	int t = 0;
-	std::cin >> t;
 }

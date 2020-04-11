@@ -2,39 +2,69 @@
 #pragma once
 using namespace std;
 
-void printMartix4x4(int m[4][4]) {
-	for (int i = 0; i < 4; ++i) {
-		for (int j = 0; j < 4; ++j) {
-			cout << m[i][j] << " ";
-		}
-		cout << endl;
-	}
-}
+class Matrix{
+    private:
+     int n ;
+     int nums[10][10];
+     
+    public:
+     Matrix(){
+         n =0;
+     }
 
-void inputMartix4x4(int m[4][4]) {
-	for (int i = 0; i < 4; ++i) {
-		for (int j = 0; j < 4; ++j) {
-			cin >> m[i][j];
-			cout << " ";
-		}
-		cout << endl;
-	}
-}
+     void printNums(){
+     for(int i =0;i<n;i++){
+        for(int j =0 ;j<n;j++)
+            cout<<nums[i][j]<<'\t';
+        cout<<endl;
+        }
+     }
 
-void add(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-	
-	printMartix4x4(result);
-}
+     void setNums(){
+         cout<<"Input size:";
+         cin>>n;
+         cout<<"Input nums:"<<endl;
+         for(int i=0;i<n;i++)
+            for(int j =0;j<n;j++)
+                cin>>nums[i][j];
+     }
 
-void minus(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
+     Matrix operator+(const Matrix &a){
+         Matrix ans;
+         if(a.n!=n){cout<<"error!"<<endl;
+         return ans;
+         }
+         ans.n=n;
+         for(int i = 0;i<n;i++)
+             for(int j=0;j<n;j++)
+                ans.nums[i][j]=nums[i][j]+a.nums[i][j];
+         return ans;
+     }
 
-	printMartix4x4(result);
-}
+     Matrix operator-(const Matrix&a){
+         Matrix ans;
+         if(a.n!=n){cout<<"error!"<<endl;
+         return ans;
+         }
+         ans.n=n;
+         for(int i = 0;i<n;i++)
+             for(int j=0;j<n;j++)
+                ans.nums[i][j]=nums[i][j]-a.nums[i][j];
+         return ans;
+     }
 
-void multiple(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-
-	printMartix4x4(result);
-}
+     Matrix operator*(const Matrix&a){
+         Matrix ans;
+         if(a.n!=n){cout<<"error!"<<endl;
+         return ans;
+         }
+         ans.n=n;
+         for(int i = 0;i<n;i++)
+            for(int j = 0 ;j<n;j++){
+                ans.nums[i][j]=0;
+                for(int q=0;q<n;q++)
+                    ans.nums[i][j]+=nums[i][q]*a.nums[q][j];
+            }
+            return ans;
+     }
+};
