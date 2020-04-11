@@ -1,17 +1,23 @@
-﻿#include <iostream>
+#include <iostream>
 #include "Matrix.h"
-
-void test() 
-{
-	int a[4][4];
-	inputMartix4x4(a);
-	printMartix4x4(a);
-}
+using namespace std;
 
 int main()
 {
-    std::cout << "test:\n";
-	test();
-	int t = 0;
-	std::cin >> t;
+    cout<<"Warning: you should input correct matrix\n";
+    matrix a('a');
+    matrix b('b');
+    matrix c;
+    matrix d;
+    matrix e;
+    c=a+b;
+    d=a*b;
+    e=a-b;
+    cout<<"this is the result of a+b\n";
+    c.show();
+    cout<<"this is the result of a*b\n";
+    d.show();
+    cout<<"this is the result of a-b\n";
+    e.show();
 }
+

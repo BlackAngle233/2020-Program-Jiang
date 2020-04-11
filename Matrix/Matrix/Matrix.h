@@ -1,40 +1,69 @@
-#include <iostream>
-#pragma once
-using namespace std;
-
-void printMartix4x4(int m[4][4]) {
-	for (int i = 0; i < 4; ++i) {
-		for (int j = 0; j < 4; ++j) {
-			cout << m[i][j] << " ";
-		}
-		cout << endl;
-	}
-}
-
-void inputMartix4x4(int m[4][4]) {
-	for (int i = 0; i < 4; ++i) {
-		for (int j = 0; j < 4; ++j) {
-			cin >> m[i][j];
-			cout << " ";
-		}
-		cout << endl;
-	}
-}
-
-void add(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-	
-	printMartix4x4(result);
-}
-
-void minus(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-
-	printMartix4x4(result);
-}
-
-void multiple(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-
-	printMartix4x4(result);
-}
+#ifndef matrix_h
+#define matrix_h
+class matrix{
+public:
+    int **a;
+    int col;
+    int row;
+    matrix(){}
+    matrix(char c){
+        cout<<"Please input the col of "<<c<<'\n';
+        cin>>col;
+        cout<<"Please input the row of "<<c<<'\n';
+        cin>>row;
+        a= new int *[row];
+        for(int i=0;i<row;++i){
+            a[i]=new int[col];
+        }
+        cout<<"Please input the matrix\n";
+        for(int i=0;i<row;++i)
+            for(int j=0;j<col;++j){
+                cin>>a[i][j];
+            }
+    }
+    matrix(int x,int y){
+        row=x;
+        col=y;
+        a= new int *[x];
+        for(int i=0;i<x;++i){
+            a[i]=new int[y];
+        }
+    }
+    void show(){
+        for(int i=0;i<row;++i)
+        {
+            for(int j=0;j<col;++j){
+                cout<<a[i][j]<<' ';
+            }
+            cout<<endl;
+        }
+    }
+    matrix operator+(matrix x){
+        matrix c(row,col);
+        for(int i=0;i<row;++i)
+            for(int j=0;j<col;++j){
+                c.a[i][j]=a[i][j]+x.a[i][j];
+            }
+        return c;
+    }
+    matrix operator-(matrix x){
+        matrix c(row,col);
+        for(int i=0;i<row;++i)
+            for(int j=0;j<col;++j){
+                c.a[i][j]=a[i][j]-x.a[i][j];
+            }
+        return c;
+    }
+    matrix operator*(matrix x){
+        matrix c(row,col);
+        for(int i=0;i<row;++i)
+            for(int j=0;j<col;++j){
+                int sum=0;
+                for(int k=0;k<col;++k)
+                    sum+=a[i][k]*x.a[k][j];
+                c.a[i][j]=sum;
+            }
+        return c;
+    }
+};
+#endif
