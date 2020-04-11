@@ -1,12 +1,28 @@
 ﻿#include <iostream>
 
-int getRevseOrders(int num[], int len)
+int getReverseOrders(int num[], int len)
 {
-
+	int count = 0;
+	int length = sizeof(num);
+	for (int i = 0; i < length - 1; i++) {
+		for (int j = i + 1; j < length; j++) {
+			if (num[i] > num[j]) {
+				count++;
+			}
+		}
+	}
+	return count;
 }
 
 void printPairs(int num[], int len)
 {
+	int len = sizeof(num);
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			std:: cout << num[i], num[j];
+			std ::cout << "\n";
+		}
+	}
 
 }
 
