@@ -21,20 +21,76 @@ void inputMartix4x4(int m[4][4]) {
 	}
 }
 
-void add(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-	
-	printMartix4x4(result);
+int Sum4x4(int a[4][4], int b[4][4])
+{
+	int sum[4][4];
+
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			sum[i][j] = a[i][j] + b[i][j];
+		}
+	}
+	cout << "矩阵之和为：" << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cout << sum[i][j] << " ";
+		}
+		cout << endl;
+	}
+	return 0;
 }
 
-void minus(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
+int Minus4x4(int a[4][4], int b[4][4])
+{
+	int minus[4][4];
 
-	printMartix4x4(result);
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			minus[i][j] = a[i][j] - b[i][j];
+		}
+	}
+	cout << "矩阵之差为：" << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cout << minus[i][j] << " ";
+		}
+		cout << endl;
+	}
+	return 0;
 }
 
-void multiple(int m1[4][4], int m2[4][4]) {
-	int result[4][4];
-
-	printMartix4x4(result);
+int Multiply4x4(int a[4][4], int b[4][4])
+{
+	int x = 0;
+	int multiply[4][4];
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			for (int z = 0; z < 4; z++)
+			{
+				x += a[i][z] * b[z][j];
+			}
+			multiply[i][j] = x;
+			x = 0;
+		}
+	}
+	cout << "矩阵之积为：" << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cout << multiply[i][j] << " ";
+		}
+		cout << endl;
+	}
+	return 0;
 }
