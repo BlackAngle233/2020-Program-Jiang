@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include"Mat4.h"
 using namespace std;
 
 int getRevseOrders(int num[], int len)
@@ -41,6 +42,23 @@ void test()
 
 int main()
 {
-	test();
+	matrix a, b;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			a.set(i, j, i);
+			b.set(i, j, j);
+		}
+	}
+	a.print();
+	b.print();
+
+	matrix sum, dif, pro;
+	sum = a + b;
+	dif = a - b;
+	pro = a * b;
+
+	sum.print();
+	dif.print();
+	pro.print();
 	return 0;
 }
