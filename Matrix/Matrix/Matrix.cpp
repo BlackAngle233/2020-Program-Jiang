@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include<iostream>
 using namespace std;
 float A[100], B[100];
 char c;
