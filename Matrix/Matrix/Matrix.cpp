@@ -1,17 +1,23 @@
 ﻿#include <iostream>
 #include "Matrix.h"
 
-void test() 
+void test()
 {
 	int a[4][4];
-	inputMartix4x4(a);
-	printMartix4x4(a);
+	int b[4][4];
+	cout << "请输入第一个4x4矩阵：" << endl;
+	inputM(a);
+	cout << "请输入第二个4x4矩阵：" << endl;
+	inputM(b);
+	cout << "矩阵的和：" << endl;
+	plusM(a, b);
+	cout << "矩阵的差：" << endl;
+	subM(a, b);
+	cout << "矩阵的积：" << endl;
+	multM(a, b);
 }
 
 int main()
 {
-    std::cout << "test:\n";
 	test();
-	int t = 0;
-	std::cin >> t;
 }
