@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "mat4.h"
 using namespace std;
 
 template <class T>
@@ -40,23 +41,35 @@ void printPairs(int num[], int len)
     cout << " " << endl;
 }
 
+
 void test()
 {
-	int num1[] = { 1, 3 , 4 , 7,  2 };
-	int num2[] = { 9, 8, 7, 6, 5 };
-
-    cout << "数组1的对有： " << ends;
-    printPairs(num1, getArrayLen(num1));
-    cout << "数组2的对有： " << ends;
-    printPairs(num2, getArrayLen(num2));
-	// task  
-	// 1. print out all pairs 
-	// 2 . compute reverse orders 
-    cout << "数组1的逆序数为： " << getRevseOrders(num1, getArrayLen(num1)) << endl;
-    cout << "数组2的逆序数为： " << getRevseOrders(num2, getArrayLen(num2)) << endl;
+    int num1[2][2] = { 1, 3, 4, 7 };
+    int num2[2][2] = { 9, 8, 7, 6 };
+    int rows1 = getArrayLen(num1);
+    int cols1 = getArrayLen(*num1);//获取矩阵1的行、列
+    int rows2 = getArrayLen(num2);
+    int cols2 = getArrayLen(*num2);//获取矩阵2的行、列
+    //矩阵相加、相减
+    if (rows1 == rows2 && cols1 == cols2)
+    {
+        cout << "矩阵相加的结果为：" << endl;
+        matrixAdd((int**)num1, (int**)num2, rows1, cols2);
+        cout << "矩阵相减的结果为：" << endl;
+        matrixSub((int**)num1, (int**)num2, rows1, cols2);
+    }
+    //矩阵相乘
+    if (rows1 == cols2)
+    {
+        cout << "矩阵相乘的结果为：" << endl;
+        matrixMul((int**)num1, (int**)num2, rows1, cols2, rows2);
+    }
 }
 
 int main()
 {
     test();
+
+    return 0;
+
 }
