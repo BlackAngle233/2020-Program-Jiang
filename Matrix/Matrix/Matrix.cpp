@@ -1,6 +1,4 @@
 ﻿#include "Matrix.h"
-
-#include "pch.h"
 #include <iostream>
 #pragma once
 using namespace std;
@@ -32,7 +30,8 @@ void inputMartix4x4(int m1[4][4])
 
 }
 
-void add(int m1[4][4], int m2[4][4]) {
+void add(int m1[4][4], int m2[4][4]) 
+{
 	int result[4][4];
 	for (int i = 0; i < 4; ++i)
 	{
@@ -45,7 +44,8 @@ void add(int m1[4][4], int m2[4][4]) {
 	printMartix4x4(result);
 }
 
-void substract(int m1[4][4], int m2[4][4]) {
+void substract(int m1[4][4], int m2[4][4]) 
+{
 	int result[4][4];
 	for (int i = 0; i < 4; ++i)
 	{
@@ -77,11 +77,11 @@ void test()
 	inputMartix4x4(b);
 	printMartix4x4(a);
 	printMartix4x4(b);
-	cout << "相加：" << endl;
+	cout << "sum" << endl;
 	add(a, b);
-	cout << "相减：" << endl;
+	cout << "minus" << endl;
 	substract(a, b);
-	cout << "相乘：" << endl;
+	cout << "mulpitle" << endl;
 	multiple(a, b);
 }
 
