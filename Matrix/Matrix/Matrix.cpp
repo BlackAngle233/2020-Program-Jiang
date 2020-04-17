@@ -1,21 +1,92 @@
-﻿#include <iostream>
-#include "Matrix.h"
+﻿#include "Matrix.h"
 
-void test() 
+#include "pch.h"
+#include <iostream>
+#pragma once
+using namespace std;
+
+void printMartix4x4(int m1[4][4])
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			cout << m1[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+}
+
+void inputMartix4x4(int m1[4][4])
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			cin >> m1[i][j];
+			cout << " ";
+		}
+		cout << endl;
+	}
+
+}
+
+void add(int m1[4][4], int m2[4][4]) {
+	int result[4][4];
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			result[i][j] = m1[i][j] + m2[i][j];
+		}
+	}
+
+	printMartix4x4(result);
+}
+
+void substract(int m1[4][4], int m2[4][4]) {
+	int result[4][4];
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			result[i][j] = m1[i][j] - m2[i][j];
+		}
+	}
+	printMartix4x4(result);
+}
+
+void multiple(int m1[4][4], int m2[4][4]) {
+	int result[4][4];
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			result[i][j] = m1[i][j] * m2[j][i];
+		}
+	}
+	printMartix4x4(result);
+}
+
+void test()
 {
 	int a[4][4];
+	int b[4][4];
 	inputMartix4x4(a);
+	inputMartix4x4(b);
 	printMartix4x4(a);
-	cout << "与自身相加：" << endl;
-	add(a, a);
-	cout << "与自身相减：" << endl;
-	substract(a, a);
-	cout << "与自身相乘：" << endl;
-	multiple(a, a);
+	printMartix4x4(b);
+	cout << "相加：" << endl;
+	add(a, b);
+	cout << "相减：" << endl;
+	substract(a, b);
+	cout << "相乘：" << endl;
+	multiple(a, b);
 }
 
 int main()
 {
-    std::cout << "test:\n";
+	cout << "test:" << endl;
 	test();
 }
