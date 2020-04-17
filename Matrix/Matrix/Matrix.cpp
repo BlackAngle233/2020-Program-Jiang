@@ -6,6 +6,7 @@ void test()
 	int a[4][4];
 	inputMartix4x4(a);
 	printMartix4x4(a);
+	add(a, a);
 }
 
 int main()
