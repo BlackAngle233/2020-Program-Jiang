@@ -1,6 +1,7 @@
-#include <iostream>
 #pragma once
 using namespace std;
+
+
 
 class Mat4
 {
@@ -11,11 +12,11 @@ public:
 
 	void Input();
 
-	Mat4 operator+(Mat4& m);
+	Mat4 operator+(const Mat4& m);
 
-	Mat4 operator-(Mat4& m);
+	Mat4 operator-(const Mat4& m);
 
-	Mat4 operator*(Mat4& m);
+	Mat4 operator*(const Mat4& m);
 
 	void Print();
 

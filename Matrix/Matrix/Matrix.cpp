@@ -1,6 +1,7 @@
 ﻿
 #include <iostream>
 #include "Matrix.h"
+
 Mat4::Mat4()
 {
 	for (int i = 0; i < 4; ++i)
@@ -20,7 +21,7 @@ void Mat4::Input()
 	}
 }
 
-Mat4 Mat4::operator+(Mat4& m)
+Mat4 Mat4::operator+(const Mat4& m)
 {
 	Mat4 temp;
 	for (int i = 0; i < 4; ++i)
@@ -32,7 +33,7 @@ Mat4 Mat4::operator+(Mat4& m)
 }
 
 
-Mat4 Mat4::operator-(Mat4& m)
+Mat4 Mat4::operator-(const Mat4& m)
 {
 	Mat4 temp;
 	for (int i = 0; i < 4; ++i)
@@ -43,7 +44,7 @@ Mat4 Mat4::operator-(Mat4& m)
 	return temp;
 }
 
-Mat4 Mat4::operator*(Mat4& m)
+Mat4 Mat4::operator*(const Mat4& m)
 {
 	Mat4 temp;
 	for (int i = 0; i < 4; ++i)
