@@ -151,10 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="mat4.cpp" />
+    <ClCompile Include="mian.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="mat4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

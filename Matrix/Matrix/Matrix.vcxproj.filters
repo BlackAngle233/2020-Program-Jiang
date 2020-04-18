@@ -15,12 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Matrix.cpp">
+    <ClCompile Include="mian.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mat4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Matrix.h">
+    <ClInclude Include="mat4.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
