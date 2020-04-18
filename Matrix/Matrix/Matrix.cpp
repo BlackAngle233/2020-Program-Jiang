@@ -1,16 +1,17 @@
 ﻿#include <iostream>
-#include "Matrix.h"
+#include "Matrix4.h"
 
 void test() 
 {
 	std::cout << "m1:\n";
-	int m1[4][4];
+	Mat m1;
 	inputMartix4x4(m1);
 	std::cout << "m2:\n";
-	int m2[4][4];
+	Mat m2;
 	inputMartix4x4(m2);
 	std::cout << "multiple:\n";
-	multiple(m1, m2);
+	Mat m3 = multiple(m1, m2);
+	printMartix4x4(m3);
 }
 
 int main()

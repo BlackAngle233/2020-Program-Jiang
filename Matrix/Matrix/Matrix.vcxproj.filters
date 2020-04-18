@@ -18,9 +18,12 @@
     <ClCompile Include="Matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Matrix.h">
+    <ClInclude Include="Matrix4.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
