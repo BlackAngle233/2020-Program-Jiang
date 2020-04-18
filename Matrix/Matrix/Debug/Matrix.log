@@ -1,3 +1,5 @@
 ﻿  Matrix.cpp
-D:\github\2020-Program-Jiang\Matrix\Matrix\Matrix.h(151,26): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+  main.cpp
+  正在生成代码...
+D:\github\2020-Program-Jiang\Matrix\Matrix\Matrix.cpp(141,25): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
   Matrix.vcxproj -> D:\github\2020-Program-Jiang\Matrix\Debug\Matrix.exe
