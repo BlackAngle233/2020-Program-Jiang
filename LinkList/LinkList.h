@@ -12,6 +12,7 @@ struct LinkList
 LinkList* create(int [], int );
 void erase(LinkList*);
 void insert(LinkList*, int);
+void insert(LinkList*, LinkList::Node*);
 LinkList::Node* find(LinkList::Node*,int);
 void remove(LinkList::Node*);
 void remove(LinkList*, int);

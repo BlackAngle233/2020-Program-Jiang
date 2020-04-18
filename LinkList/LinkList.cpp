@@ -20,12 +20,25 @@ LinkList* create(int nums[], int len)
 }
 void erase(LinkList* list)
 {
+	LinkList::Node* p = nullptr;
+	if (list->head == nullptr)
+		return;
+	
 	while (list->head->next)
 	{
-		list->head = list->head->next;
+		p = list->head->next;
 		delete list->head;
+		list->head = p;
+	}
+
+	if (list->head)
+	{
+		delete list->head;
+		list->head = nullptr;
 	}
 	delete list;
+	list = nullptr;
+
 }
 void insert(LinkList* list , int v)//insert at the head
 {
@@ -33,6 +46,12 @@ void insert(LinkList* list , int v)//insert at the head
 	newNode->vlaue = v;
 	newNode->next = list->head->next;
 	list->head->next = newNode;
+}
+
+void insert(LinkList* list, LinkList::Node* node)
+{
+	node->next = list->head->next;
+	list->head->next = node;
 }
 LinkList::Node* find(LinkList::Node* head,int v)
 {

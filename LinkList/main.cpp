@@ -9,6 +9,11 @@ void test()
 	print(list);
 	remove(list, 2);
 	print(list);
+	LinkList::Node* node = new LinkList::Node();
+	node->vlaue = 3;
+	insert(list, node);
+	print(list);
+	erase(list);
 }
 
 int main()
