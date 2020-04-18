@@ -2,6 +2,39 @@
 #pragma once
 using namespace std;
 
+struct Mat4 {
+	int m[4][4];
+};
+
+void initMat4(Mat4& Matrix) {
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cin >> Matrix.m[i][j];
+			cout << " ";
+		}
+		cout << endl;
+	}
+}
+
+void print(Mat4& Matrix) {
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cout << Matrix.m[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+Mat4 add(const Mat4& Matrix1, const const Mat4& Matrix2) {
+	Mat4 newMatrix;
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			newMatrix.m[i][j] = Matrix1.m[i][j] + Matrix2.m[i][j];
+		}
+	}
+	return newMatrix;
+}
+
 void printMartix4x4(int m[4][4]) {
 	for (int i = 0; i < 4; ++i) {
 		for (int j = 0; j < 4; ++j) {

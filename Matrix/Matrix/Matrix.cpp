@@ -27,8 +27,19 @@ void test()
 
 }
 
+void lesson() {
+	Mat4 a;
+	Mat4 b;
+	initMat4(a);
+	initMat4(b);
+
+	Mat4 c = add(a, b);
+	print(c);
+}
+
 int main()
 {
     std::cout << "test:\n";
-	test();
+	//test();
+	lesson();
 }

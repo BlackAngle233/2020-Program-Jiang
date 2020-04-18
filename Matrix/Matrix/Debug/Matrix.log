@@ -1,2 +1,3 @@
 ﻿  Matrix.cpp
+D:\workspace\github\2020-Program-Jiang\Matrix\Matrix\Matrix.h(28,37): warning C4114:  多次使用同一类型限定符
   Matrix.vcxproj -> D:\workspace\github\2020-Program-Jiang\Matrix\Debug\Matrix.exe
