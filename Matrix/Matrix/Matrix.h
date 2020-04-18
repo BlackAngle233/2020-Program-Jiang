@@ -1,5 +1,6 @@
-#include <iostream>
 #pragma once
+#include <iostream>
+
 #ifndef MATRIX
 #define MATRIX
 using namespace std;
