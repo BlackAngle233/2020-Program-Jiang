@@ -9,12 +9,13 @@ void test()
 	inputMartix4x4(a);
 	cout << "inputMartix4x4 B:" << endl;
 	inputMartix4x4(b);
-	int r1[4][4];
-	Add(a, b, r1);
-	int r2[4][4];
-	Minus(a, b, r2);
-	int r3[4][4];
-	Multiple(a, b, r3);
+	int r[4][4];
+	Add(a, b, r);
+	printMartix4x4(r);	cout << endl;
+	Minus(a, b, r);
+	printMartix4x4(r);	cout << endl;
+	Multiple(a, b, r);
+	printMartix4x4(r);	cout << endl;
 }
 
 int main()
