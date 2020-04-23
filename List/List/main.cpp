@@ -3,5 +3,9 @@
 
 int main()
 {
-	std::cout << "Hello World!\n";
+	SingleList s;
+	s.create();
+	s.insert(0, 9);
+	s.print();
+	system("pause");
 }
