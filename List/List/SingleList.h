@@ -88,6 +88,8 @@ void remove(SingleList* list, SingleList::Node* node)
 		p->next = p2->next;
 		delete p2;
 		list->length -= 1;
+		if(list->length == 0)
+			list->head->next = nullptr;
 	}
 }
 
@@ -110,6 +112,8 @@ void remove(SingleList* list,int v)
 		p->next = p2->next;
 		delete p2;
 		list->length -= 1;
+		if(list->length == 0)
+			list->head->next = nullptr;
 	}
 }
 

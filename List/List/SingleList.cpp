@@ -43,6 +43,7 @@ void insert(SingleList *list, int v)			//尾插
 	p->next->value = v;
 	p->next->next = nullptr;
 	list->length += 1;
+	
 }
 
 SingleList::Node* find(SingleList* list, int v)
@@ -76,6 +77,8 @@ void remove(SingleList* list, SingleList::Node* node)
 		p->next = p2->next;
 		delete p2;
 		list->length -= 1;
+		if(list->length == 0)
+			list->head->next = nullptr;
 	}
 }
 
@@ -98,6 +101,8 @@ void remove(SingleList* list,int v)
 		p->next = p2->next;
 		delete p2;
 		list->length -= 1;
+		if(list->length == 0)
+			list->head->next = nullptr;
 	}
 }
 
