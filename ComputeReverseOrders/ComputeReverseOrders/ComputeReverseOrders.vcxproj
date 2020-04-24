@@ -152,9 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ComputeReverseOrders.cpp" />
-    <ClCompile Include="Mat4.cpp" />
+    <ClCompile Include="linklist.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linklist.h" />
     <ClInclude Include="Mat4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

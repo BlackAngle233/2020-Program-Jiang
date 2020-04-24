@@ -18,12 +18,15 @@
     <ClCompile Include="ComputeReverseOrders.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Mat4.cpp">
+    <ClCompile Include="linklist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mat4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linklist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

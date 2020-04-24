@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include"Mat4.h"
+#include"linklist.h"
 using namespace std;
 
 int getRevseOrders(int num[], int len)
@@ -42,23 +43,10 @@ void test()
 
 int main()
 {
-	matrix a, b;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			a.set(i, j, i);
-			b.set(i, j, j);
-		}
-	}
-	a.print();
-	b.print();
+	int a[] = { 1,2,3,4,5,4 };
+	LinkList* list = create(a, 6);
+	print(list);
 
-	matrix sum, dif, pro;
-	sum = a + b;
-	dif = a - b;
-	pro = a * b;
 
-	sum.print();
-	dif.print();
-	pro.print();
 	return 0;
 }
