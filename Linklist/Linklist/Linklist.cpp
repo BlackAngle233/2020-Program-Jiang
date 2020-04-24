@@ -41,7 +41,7 @@ int Linklist::insertNode(Node *d,int n) {//插在第n个节点后面
 		cout << "Linklist is null." << endl;
 		return -1;
 	}
-	if (d = NULL) {
+	if (d == NULL) {
 		cout << "The node inserted is NULL." << endl;
 		return -1;
 	}
