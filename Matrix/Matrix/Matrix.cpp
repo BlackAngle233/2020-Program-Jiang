@@ -11,6 +11,7 @@ void test()
 	inputMartix4x4(b);
 	printMartix4x4(a);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	printMartix4x4(b);
 	cout << "加法结果如下：" << endl;
 	add(a, b);
@@ -26,6 +27,8 @@ void test()
 	cout << "与自身相乘：" << endl;
 	multiple(a, a);
 >>>>>>> master
+=======
+>>>>>>> master
 }
 
 int main()
@@ -33,9 +36,14 @@ int main()
     std::cout << "test:\n";
 	test();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	int t = 0;
 	std::cin >> t;
 =======
+>>>>>>> master
+=======
+	int t = 0;
+	std::cin >> t;
 >>>>>>> master
 }
