@@ -21,9 +21,15 @@
     <ClCompile Include="SingleList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SingleList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
