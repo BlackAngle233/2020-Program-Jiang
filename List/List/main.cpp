@@ -1,7 +1,17 @@
 #include <iostream>
 #include "SingleList.h"
+#include "SingleList.cpp"
 
 int main()
 {
-	std::cout << "Hello World!\n";
+	create();
+	print();
+
+	//search();
+
+	//insert();
+	//print();
+
+	erase();
+	print();
 }
