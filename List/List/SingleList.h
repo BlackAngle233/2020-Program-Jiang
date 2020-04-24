@@ -1,14 +1,17 @@
 #pragma once
-
+#include<iostream>
 struct SingleList
 {	
 	struct Node
 	{
 		Node* next = nullptr;
 		int value;
-	};
+	}node;
 	Node* head;
-};
+	Node* end; 
+	Node* pnew;
+	int length;
+}singlelist;
 
-//¶¨ÒåÒ»¸öµ¥ÏòÁ´±í
-//ÊµÏÖµ¥ÏòÁ´±íµÄ create erase insert find remove(Á½ÖÖ) print Áù¸ö¹¦ÄÜ
+//å®šä¹‰ä¸€ä¸ªå•å‘é“¾è¡¨
+//å®ç°å•å‘é“¾è¡¨çš„ create erase insert find remove(ä¸¤ç§) print å…­ä¸ªåŠŸèƒ½
