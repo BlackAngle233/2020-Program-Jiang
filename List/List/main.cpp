@@ -11,6 +11,7 @@ int main()
 	cin >> n;
 	l.CreateSingleList(n);  //创建链表
 
+	cout << "链表为" << endl;
 	l.Print();  //打印链表
 
 	int value;
@@ -20,12 +21,14 @@ int main()
 	cout << "插入的位置" << endl;
 	cin >> index;
 	l.Insert(value,index);  //插入value
+	cout << "链表为" << endl;
 	l.Print();
 
 	int removevalue;
 	cout << "要删的数据" << endl;
 	cin >> removevalue;
 	l.Remove(removevalue);  //删value
+	cout << "链表为" << endl;
 	l.Print();
 
 	int num;
@@ -43,6 +46,7 @@ int main()
 		break;
 
 	case 2:
+		cout << "链表为" << endl;
 		l.Print();
 		break;
 	}
