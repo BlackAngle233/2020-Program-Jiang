@@ -10,8 +10,6 @@ void test()
 	cout << "请输入四阶矩阵m2：" << endl;
 	inputMartix4x4(b);
 	printMartix4x4(a);
-<<<<<<< HEAD
-<<<<<<< HEAD
 	printMartix4x4(b);
 	cout << "加法结果如下：" << endl;
 	add(a, b);
@@ -19,31 +17,10 @@ void test()
 	Minus(a, b);
 	cout << "乘法结果如下：" << endl;
 	multiple(a, b);
-=======
-	cout << "与自身相加：" << endl;
-	add(a, a);
-	cout << "与自身相减：" << endl;
-	substract(a, a);
-	cout << "与自身相乘：" << endl;
-	multiple(a, a);
->>>>>>> master
-=======
->>>>>>> master
 }
 
 int main()
 {
     std::cout << "test:\n";
 	test();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-	int t = 0;
-	std::cin >> t;
-=======
->>>>>>> master
-=======
-	int t = 0;
-	std::cin >> t;
->>>>>>> master
 }
