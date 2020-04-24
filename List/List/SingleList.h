@@ -1,13 +1,22 @@
 #pragma once
 
-struct SingleList
-{	
-	struct Node
-	{
-		Node* next = nullptr;
+struct SingleList{
+	private:
+		Node* head;
+    public:
+		int Len();
+		int CreateSingleList(int size);
+		void EraseSingleList();
+		void Insert(int value, int n);
+		Node* Find(int data);
+		void Remove(int value);
+		void Print();
+};
+
+struct Node{
+	public:
 		int value;
-	};
-	Node* head;
+		Node* next;
 };
 
 //定义一个单向链表
