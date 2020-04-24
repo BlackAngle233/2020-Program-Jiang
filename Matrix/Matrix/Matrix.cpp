@@ -13,11 +13,14 @@ void test()
 	printMartix4x4(a);
 	printMartix4x4(b);
 	cout << "加法结果如下：" << endl;
-	add(a, b);
+	int c[4][4];
+	add(a, b, c);
 	cout << "减法结果如下：" << endl;
-	Minus(a, b);
+	int d[4][4];
+	Minus(a, b, d);
 	cout << "乘法结果如下：" << endl;
-	multiple(a, b);
+	int e[4][4];
+	multiple(a, b, e);
 }
 
 int main()
