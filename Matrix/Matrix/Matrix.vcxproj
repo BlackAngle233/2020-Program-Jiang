@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="variable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
