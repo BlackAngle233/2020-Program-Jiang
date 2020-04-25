@@ -2,10 +2,9 @@
 #include "SingleList.h"
 
 
-bool checkBit(int a,int n) {
-	return(a >> n & 1);
-}
 int main()
 {
-	std::cout << "Hello World!\n";
+	int num[] = { 1,2,3,4,5 };
+	SingleList* list = create(num, 5);
+	print(list);
 }
