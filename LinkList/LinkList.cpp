@@ -17,16 +17,14 @@ void ListHead::list_add(LinkList newLink) {
 	if (firstLink==nullptr) {
 		firstLink = new LinkList(newLink.data);
 		lastLink = firstLink;
-		//std::cout << (*lastLink).data << std::endl;
 	}
 	else {
 		(*lastLink).next = new LinkList(newLink.data);
 		lastLink = (*lastLink).next;
-		//std::cout << (*(*lastLink).next).data << std::endl;
 	}
 }
 void ListHead::list_delete(int data) {
-	if (firstLink == lastLink) {
+	if (firstLink == nullptr) {
 		return;
 	}
 	LinkList& item = (*firstLink);
@@ -36,12 +34,9 @@ void ListHead::list_delete(int data) {
 	}
 	else {
 		while (item.next) {
-			//std::cout << item.data << "a" << std::endl;
 			if ((*item.next).data == data) {
 				LinkList& temp = (*item.next);
 				item.next = (*item.next).next;
-				//std::cout << (*item.next).data << "b" << std::endl;
-				//temp.release();
 				return;
 			}
 			item = (*item.next);
