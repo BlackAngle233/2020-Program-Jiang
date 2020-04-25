@@ -2,7 +2,7 @@
 #include "SingleList.h"
 using namespace std;
 
-SingleList::Node* createNode(int value=0) {
+SingleList::Node* createNode(int value) {
 	SingleList::Node* result = new SingleList::Node();
 	result->next = nullptr;
 	result->value = value;
@@ -38,18 +38,21 @@ void insert(SingleList* list, int value) {
 	{
 		head = head->next;
 	}
-	head->value = value;
+	head->next = createNode(value);
+
 }
 
 SingleList::Node* find(SingleList* list,int value) {
 	SingleList::Node* head = list->head;
-	while (head->value != value) {
-		if (head->next == nullptr) {
-			return nullptr;
-		head = head->next;
-		}
+	if (head->value = value) {
+		return head;
 	}
-	return head;
+	while (head->next != nullptr) {
+		head = head->next;
+		if (head->value == value)
+			return head;
+	}
+	return nullptr;
 }
 
 void remove(SingleList* list, SingleList::Node* node) {
@@ -75,12 +78,13 @@ void remove(SingleList* list, int value) {
 
 void print(SingleList* list) {
 	SingleList::Node* node = list->head;
-	int i = 0;
 	cout << "当前链表为:";
 	while (node != nullptr) {
-		cout << node->value << " ";
+		cout << node->value;
+		if (node->next != nullptr) {
+			cout << "->";
+		}
 		node = node->next;
-		i++;
 	}
 	cout << endl;
 }
