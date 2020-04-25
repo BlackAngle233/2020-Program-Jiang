@@ -11,11 +11,10 @@ SingleList::Node* createNode(int value=0) {
 
 SingleList* create(int num[], int len) {
 	SingleList* result = new SingleList();
-	SingleList::Node* head= result->head;
-	head = createNode(num[0]);
-
+	result->head = createNode(num[0]);
+	SingleList::Node* head = result->head;
 	for (int i = 1; i < len; ++i) {
-		head->next= createNode(num[i]);
+		head->next = createNode(num[i]);
 		head = head->next;
 	}
 	return result;
