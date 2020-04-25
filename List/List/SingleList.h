@@ -32,7 +32,8 @@ void erase(SingleList* list) {
 		delete p;
 	}
 }
-void insert(SingleList* list,SingleList::Node* n,int x) {
+void insert(SingleList* list,SingleList::Node* n,int x)//在节点前插入 
+{
 	SingleList::Node* p;
 	SingleList::Node* q;
 	p = list->head;
