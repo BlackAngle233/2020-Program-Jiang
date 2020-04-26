@@ -1,22 +1,18 @@
 #pragma once
 #include<iostream>
-class LinkList{
-public:
-	int data;
-	LinkList* next;
-
-	LinkList(int);
-	//LinkList(char);
-	void release();
+struct LinkList{
+	struct Node {
+		int val;
+		Node* next=nullptr;
+	};
+	Node* head;
 };
 
-class ListHead {
-public:
-	LinkList* firstLink;
-	LinkList* lastLink;
-
-	ListHead();
-	void list_add(LinkList);
-	void list_delete(int data);
-};
-
+LinkList::Node* createNode(int);
+LinkList* create(int[],int);
+void insert(LinkList*,int);
+void remove(LinkList*,LinkList::Node*);
+void remove(LinkList*,int);
+void erase(LinkList*);
+LinkList::Node* find(LinkList*,int);
+void print(LinkList*);

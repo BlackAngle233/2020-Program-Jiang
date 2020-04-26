@@ -1,45 +1,74 @@
 #include<iostream>
 #include"LinkList.h"
 
-LinkList::LinkList(int data1) {
-	data = data1;
-	next = nullptr;
+LinkList::Node* createNode(int val) {
+	LinkList::Node* n = new LinkList::Node;
+	n->val = val;
+	n->next = nullptr;
+	return n;
 }
-
-void LinkList::release() {
-	delete(next);
+LinkList* create(int list[],int size) {
+	LinkList* res = new LinkList;
+	res->head = createNode(0);
+	LinkList::Node* item = res->head;
+	for (int i = 0;i < size;i++) {
+		item->next = createNode(list[i]);
+		item = item->next;
+	}
+	return res;
 }
-ListHead::ListHead() {
-	firstLink = nullptr;
-	lastLink = firstLink;
+void insert(LinkList* list,int val) {
+	LinkList::Node* item = list->head;
+	while (item->next) {
+		item = item->next;
+	}
+	item->next = createNode(val);
 }
-void ListHead::list_add(LinkList newLink) {
-	if (firstLink==nullptr) {
-		firstLink = new LinkList(newLink.data);
-		lastLink = firstLink;
-	}
-	else {
-		(*lastLink).next = new LinkList(newLink.data);
-		lastLink = (*lastLink).next;
-	}
-}
-void ListHead::list_delete(int data) {
-	if (firstLink == nullptr) {
-		return;
-	}
-	LinkList& item = (*firstLink);
-	if (item.data == data) {
-		firstLink = item.next;
-		item.release();
-	}
-	else {
-		while (item.next) {
-			if ((*item.next).data == data) {
-				LinkList& temp = (*item.next);
-				item.next = (*item.next).next;
-				return;
-			}
-			item = (*item.next);
+void remove(LinkList* list, LinkList::Node* n) {
+	LinkList::Node* item = list->head;
+	while (item->next) {
+		if (item->next == n) {
+			item->next = item->next->next;
+			return;
 		}
+		item = item->next;
 	}
+}
+void remove(LinkList* list, int v) {
+	LinkList::Node* item = list->head;
+	while (item->next) {
+		if (item->next->val == v) {
+			item->next = item->next->next;
+			return;
+		}
+		item = item->next;
+	}
+}
+void erase(LinkList* list) {
+	LinkList::Node* item = list->head;
+	LinkList::Node* next = item->next;
+	while (next) {
+		delete(item);
+		item = next;
+		next = item->next;
+	}
+}
+LinkList::Node* find(LinkList* list, int v) {
+	LinkList::Node* item = list->head;
+	LinkList::Node* res = nullptr;
+	while (item->next) {
+		if (item->next->val == v) {
+			res = item->next;
+			break;
+		}
+		item = item->next;
+	}
+	return res;
+}
+void print(LinkList* list) {
+	LinkList::Node* item = list->head;
+	while (item->next) {
+		std::cout << item->next->val << " ";
+	}
+	std::cout << std::endl;
 }
