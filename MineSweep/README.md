@@ -3,4 +3,4 @@
 
 
 ### 网页查看
-See [Configuration Reference](https://medemus.github.io/).
+See [扫雷小游戏](https://medemus.github.io/).
