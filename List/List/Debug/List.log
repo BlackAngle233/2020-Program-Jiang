@@ -1,4 +1,3 @@
-﻿  sList.cpp
-  main.cpp
-  正在生成代码...
-  List.vcxproj -> D:\github\2020-Program-Jiang\List\Debug\List.exe
+﻿  List.cpp
+List.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall List::InserList(int,int)" (?InserList@List@@QAEXHH@Z)，该符号在函数 _main 中被引用
+D:\visual studio\List\Debug\List.exe : fatal error LNK1120: 1 个无法解析的外部命令
