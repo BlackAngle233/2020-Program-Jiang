@@ -8,24 +8,24 @@ int main()
 	int num[] = { 1,2,3,4,5,4,5,1 };
 	int size = 8;
 
-	SingleList* test = create(num, size);
-	print(test);
+	SingleList* test = new SingleList(num, size);
+	test->print();
 
-	insert(test, 2);
-	print(test);
+	test->insert(2);
+	test->print();
 
-	SingleList::Node* testNode = find(test, 3);
+	SingleList::Node* testNode = test->find(3);
 
-	remove(test, testNode);
-	print(test);
+	test->remove(testNode);
+	test->print();
 
-	remove(test, 2);
-	print(test);
+	test->remove(2);
+	test->print();
 
-	remove(test, 4);
-	print(test);
+	test->remove(4);
+	test->print();
 
-	erase(test);
+	test->erase();
 
 	int t;
 	cin >> t;

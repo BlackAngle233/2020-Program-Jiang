@@ -1,46 +1,44 @@
 ﻿#include <iostream>
 #include "SingleList.h"
 
-SingleList::Node* createNode(int v) {
+SingleList::Node* SingleList::createNode(int v) {
 	SingleList::Node* result = new SingleList::Node();
 	result->next = NULL;
 	result->value = v;
 	return result;
 }
 
-SingleList* create(int num[], int size) {
-	SingleList* result = new SingleList();
-	result->head = createNode(0);
-	SingleList::Node* tmp = result->head;
+SingleList::SingleList(int num[], int size) {
+	this->head = createNode(0);
+	SingleList::Node* tmp = this->head;
 	for (int i = 0; i < size; ++i) {
 		tmp->next = createNode(num[i]);
 		tmp = tmp->next;
 	}
-	return result;
 }
 
-void erase(SingleList* s) {
-	SingleList::Node* tmp = s->head;
+void SingleList::erase() {
+	SingleList::Node* tmp = this->head;
 	SingleList::Node* next = tmp->next;
 	while (next != NULL)
 	{
-		delete(tmp);
+		delete tmp;
 		tmp = next;
 		next = tmp->next;
 	}
-	delete(tmp);
-	delete(s);
+	delete tmp;
+	delete this;
 }
 
-void insert(SingleList* s, int v) {
-	SingleList::Node* tmp = s->head;
+void  SingleList::insert(int v) {
+	SingleList::Node* tmp = this->head;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = createNode(v);
 }
 
-SingleList::Node* find(SingleList* s, int v) {
-	SingleList::Node* tmp = s->head;
+SingleList::Node* SingleList::find( int v) {
+	SingleList::Node* tmp = this->head;
 	while (tmp->next != NULL) {
 		tmp = tmp->next;
 		if (tmp->value == v)
@@ -49,9 +47,9 @@ SingleList::Node* find(SingleList* s, int v) {
 	return nullptr;
 }
 
-void remove(SingleList* s, SingleList::Node* n) {
-	SingleList::Node* tmp = s->head;
-	SingleList::Node* pre = s->head;
+void SingleList::remove(SingleList::Node* n) {
+	SingleList::Node* tmp = this->head;
+	SingleList::Node* pre = this->head;
 	while (tmp->next != NULL) {
 		tmp = tmp->next;
 		if (tmp == n) {
@@ -63,9 +61,9 @@ void remove(SingleList* s, SingleList::Node* n) {
 	}
 }
 
-void remove(SingleList* s, int v) {
-	SingleList::Node* tmp = s->head;
-	SingleList::Node* pre = s->head;
+void SingleList::remove(int v) {
+	SingleList::Node* tmp = this->head;
+	SingleList::Node* pre = this->head;
 	while (tmp->next != NULL) {
 		tmp = tmp->next;
 		if (tmp->value == v) {
@@ -77,8 +75,8 @@ void remove(SingleList* s, int v) {
 	}
 }
 
-void print(SingleList* s) {
-	SingleList::Node* tmp = s->head;
+void SingleList::print() {
+	SingleList::Node* tmp = this->head;
 	while (1) {
 		tmp = tmp->next;
 		std::cout << tmp->value;
