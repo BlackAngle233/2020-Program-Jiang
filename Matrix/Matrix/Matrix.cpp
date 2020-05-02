@@ -11,6 +11,14 @@ Mat4::Mat4()
 	}
 }
 
+Mat4::Mat4(int nums[][4])
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+			this->mat[i][j] = nums[i][j];
+	}
+}
 void Mat4::Input()
 {
 	cout << "please input the 4 by 4 matrix:" << endl;
@@ -65,5 +73,18 @@ void Mat4::Print()
 		cout << endl;
 	}
 	cout << endl;
+}
 
+
+ostream& operator<< (ostream& os, const Mat4& m)
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+			os << m.mat[i][j] << " ";
+		os << endl;
+	}
+	os << endl;
+
+	return os;
 }

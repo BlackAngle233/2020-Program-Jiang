@@ -11,13 +11,16 @@ void test()
 
 	cout << "m1 + m2:" << endl;
 	Mat4 m3 = m1 + m2;
-	m3.Print();
+	/*m3.Print();*/
+	cout << m3<<endl;
 	cout << "m1 - m2:" << endl;
 	m3 = m1 - m2;
-	m3.Print();
+	/*m3.Print();*/
+	cout << m3 << endl;
 	cout << "m1 * m2:" << endl;
 	m3 = m1 * m2;
-	m3.Print();
+	/*m3.Print();*/
+	cout << m3 << endl;
 }
 
 int main()
