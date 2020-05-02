@@ -1,0 +1,4 @@
+﻿  LinkList.cpp
+C:\Users\DELL\source\repos\LinkList\LinkList.h(24,2): warning C4240:  使用了非标准扩展: 对“LinkList::Node”的访问现在被定义为“public”，而以前被定义为“private”
+C:\Users\DELL\source\repos\LinkList\LinkList.h(5): message :  参见“LinkList::Node”的声明
+  LinkList.vcxproj -> C:\Users\DELL\source\repos\LinkList\Debug\LinkList.exe
