@@ -13,7 +13,7 @@ using namespace std;
 //int block[32][32] = {0};
 //bool mine[32][32] = {false};
 //bool isClick[32][32] = {false};
-//enum Type { easy, middle, hard };
+//enum Type { easy, middle, hard };1
 //void Search(int x, int y, int maxx, int maxy) {
 //	if (x <= maxx&&y <= maxy&&x >= 0 && y >= 0 && mine[y][x] == false&&isClick[y][x]==false) 
 //	{
