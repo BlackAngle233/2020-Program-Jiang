@@ -1,0 +1,5 @@
+﻿  Func.cpp
+D:\ProgramData\VSWorkSpace2019\Minesweeper\Minesweeper\Func.cpp(21,30): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\ProgramData\VSWorkSpace2019\Minesweeper\Minesweeper\Func.cpp(28,30): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\ProgramData\VSWorkSpace2019\Minesweeper\Minesweeper\Func.cpp(35,30): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  Minesweeper.vcxproj -> D:\ProgramData\VSWorkSpace2019\Minesweeper\Debug\Minesweeper.exe
