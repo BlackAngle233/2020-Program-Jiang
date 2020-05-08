@@ -1,86 +1,108 @@
 ﻿#include <iostream>
 #include "SingleList.h"
+using namespace std;
 
-SingleList Create(int nums[], int len)
+SingleList::Node* SingleList::node(int v)
 {
-	SingleList sgl;
-	sgl.head = new Node();
-	Node* cur;
-	cur = sgl.head;
-	
-	for (int i = 0; i < len; i++)
+	SingleList::Node* node = new SingleList::Node();
+	node->data = v;
+	node->next = nullptr;
+	return node;
+}
+
+SingleList::SingleList(int nums[], int len)
+{
+	head = node(0);
+	Node* cur = head;
+	for (int i = 0; i< len; i++)
 	{
-		Node *newNode = new Node(nums[i]);
-		cur->next = newNode;
-		cur = newNode;
+		cur->next = node(nums[i]);
+		cur = cur->next;
 	}
-
-	cur->next = NULL;
-	return sgl;
 }
 
-void erase(SingleList sgl)
+void SingleList::erase()
 {
-	sgl.head->next = NULL;
-}
-
-void insert(SingleList sgl, int n)
-{
-	Node* cur = sgl.head->next;
-	Node* prev = sgl.head;
-	Node* newNode = new  Node(n);
-	newNode->next = cur;
-	prev->next = newNode;
-}
-
-Node* find(SingleList sgl, int n)
-{
-	Node* cur = sgl.head->next;
-	while (cur != NULL)
+	Node* cur = head;
+	Node* next = cur->next;
+	while (next != nullptr)
 	{
-		if (cur->value == n)
+		delete cur;
+		cur = next;
+		next = cur->next;
+	}
+	delete cur;
+	delete this;
+}
+
+void SingleList::insert(int n)
+{
+	Node* cur = head;
+	while (cur->next != NULL)
+	{
+		cur = cur->next;
+	}
+	cur->next = node(n);
+}
+
+SingleList::Node* SingleList::find(int n)
+{
+	Node* cur = head;
+	while (cur->next != nullptr)
+	{
+		if (cur->data == n)
 			return cur;
 		cur = cur->next;
 	}
+	return nullptr;
 }
 
-void remove(SingleList sgl, int n)
+void SingleList::remove(int n)
 {
-	Node* cur = sgl.head->next;
-	Node* prev = sgl.head;
-	while (cur != NULL)
+	Node* cur = head;
+	Node* next = cur->next;
+	while (next != nullptr)
 	{
-		if (cur->value == n)
-			prev->next = cur->next;
+		if (next->data == n)
+		{
+			cur->next = next->next;
+			delete(next);
+			next = cur->next;
+		}
 		else
-			prev = cur;
-		cur = cur->next;
+		{
+			cur = next;
+		}
+		next = cur->next;
 	}
 }
 
-void remove(SingleList sgl, Node* x)
+void SingleList::remove(Node* x)
 {
-	Node* cur = sgl.head->next;
-	Node* prev = sgl.head;
-	while (cur != NULL)
+	Node* cur = head;
+	Node* next = cur->next;
+	while (next != nullptr)
 	{
-		if (cur == x)
+		if (next == x)
 		{
-			prev->next = cur->next;
+			cur->next = next->next;
+			delete(x);
 			return;
 		}
-		prev = cur;
-		cur = cur->next;
+		cur = next;
+		next = next->next;
 	}
 }
 
-void print(Node* head)
+void SingleList::print()
 {
-	Node* cur = head->next;
-	while (cur != NULL)
+	Node* cur = head;
+	while (cur->next != nullptr)
 	{
-		std::cout << cur->value << "  " << std::ends;
 		cur = cur->next;
+		cout << cur->data;
+		if (cur->next != nullptr)
+			cout << "->";
 	}
-	std::cout << std::endl;
+	cout << endl;
 }

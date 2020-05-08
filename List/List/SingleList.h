@@ -3,27 +3,28 @@
 #ifndef _SINGLELIST_H_
 #define _SINGLELIST_H_
 
-struct Node
+class SingleList
 {
-	Node* next = nullptr;
-	int value;
-	Node(int i = 0)
+public:
+	struct Node
 	{
-		value = i;
-	}
-};
-struct SingleList
-{
-	Node* head;
-};
+		Node* next = nullptr;
+		int data;
+	};
 
-SingleList Create(int nums[], int len);
-void erase(SingleList sgl);
-void insert(SingleList sgl, int n);
-Node* find(SingleList sgl, int n);
-void remove(SingleList sgl, int n);
-void remove(SingleList sgl, Node* x);
-void print(Node* head);
+private:
+	Node* head;
+
+public:
+	Node* node(int v);
+	SingleList(int nums[], int len);
+	void erase();
+	void insert(int n);
+	Node* find(int n);
+	void remove(int n);
+	void remove(Node* x);
+	void print();
+};
 
 #endif // !_SINGLELIST_H_
 
