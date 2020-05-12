@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include "SingleList.h"
 using namespace std;
-SingleList create(int * a)
+SingleList SingleList::create(int * a)
 {
 	SingleList *list = new SingleList();
 	list->head = new Node();
@@ -18,7 +18,7 @@ SingleList create(int * a)
 	return *list;
 }
 
-int find(int num,SingleList list)
+int SingleList::find(int num,SingleList list)
 {
 	Node*head = list.head;
 	for (int a = 1; a < num; a++) {
@@ -28,7 +28,7 @@ int find(int num,SingleList list)
 	return head->next->value;
 }
 
-void insert(int pos, int num,SingleList list)
+void SingleList::insert(int pos, int num,SingleList list)
 {
 	Node*head = list.head;
 	
@@ -43,7 +43,7 @@ void insert(int pos, int num,SingleList list)
 	
 
 }
-void removepos(int pos, SingleList list) {
+void SingleList::removepos(int pos, SingleList list) {
 	Node*head = list.head;
 	for (int a = 1; a < pos; a++) {
 
@@ -52,7 +52,7 @@ void removepos(int pos, SingleList list) {
 	head->next = head->next->next;
 }
 
-void removenum(int num, SingleList list)
+void SingleList::removenum(int num, SingleList list)
 {
 	Node*head = list.head;
 	
@@ -69,7 +69,7 @@ void removenum(int num, SingleList list)
 	
 }
 
-void print(SingleList list)
+void SingleList::print(SingleList list)
 {
 	Node*head = list.head;
 
@@ -78,3 +78,5 @@ void print(SingleList list)
 		cout << head->value << endl;
 	}
 }
+
+
