@@ -10,7 +10,7 @@ int main()
 	insert(list, 0);
 	print(list);
 
-	SingleList::Node* node = find(list, 1);
+	SingleList::Node* node = find(list, 4);
 	cout << node->value << endl;
 	remove(list, node);
 	print(list);

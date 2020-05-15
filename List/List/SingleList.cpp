@@ -56,16 +56,18 @@ SingleList::Node* find(SingleList* list,int value) {
 }
 
 void remove(SingleList* list, SingleList::Node* node) {
-	SingleList::Node* head = list->head;
-	SingleList::Node* last = list->head;
-	while (head!= nullptr) {
-		if (head == node) {
-			last->next = head->next;
-			delete(node);
+	SingleList::Node* cur = list->head;
+	SingleList::Node* pre = list->head;
+	SingleList::Node* backup = list->head;
+	while ( cur->next!= nullptr) {
+		cur =cur->next;
+		if (cur->value==node->value) {
+			pre->next = cur->next;
+			list->head->value = backup->value;
+			cout << 111 << endl;
 			return;
 		}
-		last = head;
-		head = head->next;
+		pre = cur;
 	}
 }
 
@@ -77,14 +79,14 @@ void remove(SingleList* list, int value) {
 }
 
 void print(SingleList* list) {
-	SingleList::Node* node = list->head;
+	SingleList::Node* cur = list->head;
 	cout << "当前链表为:";
-	while (node != nullptr) {
-		cout << node->value;
-		if (node->next != nullptr) {
+	while (cur!=nullptr) {
+		cout << cur->value;
+		if (cur->next != nullptr) {
 			cout << "->";
 		}
-		node = node->next;
+		cur = cur->next;
 	}
 	cout << endl;
 }
