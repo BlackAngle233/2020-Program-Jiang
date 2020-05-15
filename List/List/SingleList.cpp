@@ -3,80 +3,81 @@
 using namespace std;
 
 
-void create()
+#include "SingleList.h"
+
+MyList::MyList(void)
 {
-	head = NULL;
-	head = new Node;
-	ptr = head;
-	int i = 0;
-	while (ptr->next)
+	m_phead = NULL;
+	m_ptemp = NULL;
+}
+
+
+MyList::~MyList(void)
+{
+	//DestroyList(m_phead);
+}
+
+void MyList::CreatList()
+{
+	m_phead = new Node;
+	m_phead->next = NULL;
+}
+
+void MyList::InsertList(int nodedata)
+{
+	Node *t = new Node;
+	t->next = m_phead->next;
+	m_phead->next = t;
+	t->data = nodedata;
+}
+
+
+
+
+Node * MyList::SearchList(int finddata)
+{
+	m_ptemp = m_phead;
+	m_ptemp = m_ptemp->next;
+	while (m_ptemp)
 	{
-		cout<< "请输入值:" << endl;
-		cin >> ptr->value;
-		ptr->next = new Node;
-		ptr = ptr->next;
-		i++;
-		if (i = 4) 
+		if (m_ptemp->data == finddata)
 		{
-			return;
+			return m_ptemp;
 		}
+		m_ptemp = m_ptemp->next;
+	}
+	return NULL;
+}
+
+void MyList::RemoveList(Node * pfind)
+{
+	m_ptemp = m_phead;
+	if (pfind->next == NULL)
+	{
+		while (m_ptemp->next != pfind)
+			m_ptemp = m_ptemp->next;
+		m_ptemp->next = pfind->next;
+		delete pfind;
+	}
+	else
+	{
+		Node *t = pfind->next;
+		pfind->data = t->data;
+		pfind->next = t->next;
+		delete t;
 	}
 }
 
-void erase()
+void MyList::PrintList(Node *head)
 {
-	ptr = head;
-	while (ptr->next != NULL)
+	Node *p = NULL;
+	while (head)
 	{
-		d = ptr;
-		ptr = ptr->next;
-		delete d;
+		p = head;
+		head = head->next;
+		cout << p->data;
 	}
 }
 
-void print()
-{
-	ptr = head;
-	do 
-	{
-		cout << ptr->value << '/t' << endl;
-		ptr = ptr->next;
-	} while (ptr != NULL);
-}
-
-void insert(int i,int n)//将值n放在第i位
-{
-	Node *q = new Node;
-	q->value = n;
-	ptr = head;
-	int m = 1;
-	while (m < i-1)
-		ptr = ptr->next;
-	q->next = ptr->next;
-	ptr->next = q->next;
-}
-
-int find(int i)//找出第几位的值
-{
-	ptr = head;
-	int m = 1;
-	while (m < i )
-	{
-		ptr = ptr->next;
-	}
-	return ptr->value;
-}
-
-void remove(int i)
-{
-	int m = 1;
-	while (m < i)
-	{
-		ptr = ptr->next;
-	}
-	d = ptr;
-	ptr = ptr->next;
-	delete d;
-}
 
 

@@ -3,10 +3,12 @@
 
 int main()
 {
-	void create();
-	void insert(int i, int n);
-	int find(int i);
-	void remove(int i);
-	void print();
-	void erase();
+	MyList *p;
+	Node *b;
+	p->CreatList();
+	p->InsertList(3);
+	p->SearchList(3);
+	p-> RemoveList(b);
+	void PrintList();
+	
 }
