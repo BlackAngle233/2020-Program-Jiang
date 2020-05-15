@@ -1,0 +1,31 @@
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\bin\Debug\MineGame.exe.config
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\bin\Debug\MineGame.exe
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\bin\Debug\MineGame.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.Form1.resources
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.exe
+c:\users\administrator\documents\visual studio 2012\Projects\MineGame\MineGame\obj\Debug\MineGame.pdb
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\bin\Debug\MineGame.exe.config
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.exe
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.pdb
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\bin\Debug\MineGame.exe
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\bin\Debug\MineGame.pdb
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.csprojResolveAssemblyReference.cache
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.Form1.resources
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.Properties.Resources.resources
+E:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.csproj.GenerateResource.Cache
+F:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\bin\Debug\MineGame.exe.config
+F:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.exe
+F:\学习资料\C# 扫雷\扫雷2\MineGame\MineGame\obj\Debug\MineGame.pdb
+C:\Users\zicheng\Desktop\MineGame\MineGame\bin\Debug\MineGame.exe.config
+C:\Users\zicheng\Desktop\MineGame\MineGame\bin\Debug\MineGame.exe
+C:\Users\zicheng\Desktop\MineGame\MineGame\bin\Debug\MineGame.pdb
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.csprojAssemblyReference.cache
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.Form1.resources
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.Properties.Resources.resources
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.csproj.GenerateResource.cache
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.csproj.CoreCompileInputs.cache
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.exe
+C:\Users\zicheng\Desktop\MineGame\MineGame\obj\Debug\MineGame.pdb

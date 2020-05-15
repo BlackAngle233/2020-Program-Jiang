@@ -1,0 +1,9 @@
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\bin\Debug\TestDynamicController.exe.config
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\bin\Debug\TestDynamicController.exe
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\bin\Debug\TestDynamicController.pdb
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.csprojResolveAssemblyReference.cache
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.Form1.resources
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.Properties.Resources.resources
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.csproj.GenerateResource.Cache
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.exe
+c:\Users\administrator\documents\visual studio 2012\Projects\MineGame\TestDynamicController\obj\Debug\TestDynamicController.pdb
