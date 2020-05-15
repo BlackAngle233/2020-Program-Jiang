@@ -1,0 +1,9 @@
+c:\users\sqjyf\documents\visual studio 2015\Projects\MineWeeper\MineWeeper\bin\Debug\MineWeeper.exe.config
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\bin\Debug\MineWeeper.exe
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\bin\Debug\MineWeeper.pdb
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.csprojResolveAssemblyReference.cache
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.Form1.resources
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.Properties.Resources.resources
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.csproj.GenerateResource.Cache
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.exe
+C:\Users\SQJYF\Documents\Visual Studio 2015\Projects\MineWeeper\MineWeeper\obj\Debug\MineWeeper.pdb
