@@ -9,12 +9,11 @@ int main() {
 		i++;
 		len++;
 	}
-	SingleList* list;
-	list = create(a, len);
-	print(list);
-	SingleList::Node* node = find(list, 5);
-	insert(list, node, 6);
-	print(list);
-	erase(list);
-	print(list);
+	LinkList*list = new LinkList(a, len);
+	list->print();
+	Node* node = list->find(5);
+	list->insert(node, 6);
+	list->print();
+	list-> erase();
+	list->print();
 }
