@@ -48,16 +48,16 @@ class minesweeper
             mines = 34;
             break;
         default:
-            mines = 48;
+            mines = 5;
             break;
         }
         int q = 0,ii,j;
         srand((int)time(0));  // 产生随机种子 
-        while(q<=mines)
+        while(q<mines)
         {
             ii = rand() % 7;
             j = rand() % 7;
-            if(table[ii][j].mineFlag == 0 && table[ii][j].openFlag==0)
+            if(table[ii][j].mineFlag == false && table[ii][j].openFlag==false)
             {
                 table[ii][j].mineFlag = true;
                 q++;
@@ -77,28 +77,28 @@ class minesweeper
                 if(table[i][j].mineFlag==1)
                     continue;
                 if(i>0)
-                    if(table[i-1][j].mineFlag==1)
+                    if(table[i-1][j].mineFlag==true)
                         num++;
                 if(i<6)
-                    if(table[i+1][j].mineFlag==1)
+                    if(table[i+1][j].mineFlag==true)
                         num++;
                 if(j>0)
-                    if(table[i][j-1].mineFlag==1)
+                    if(table[i][j-1].mineFlag==true)
                         num++;
                 if(j<6)
-                    if(table[i][j+1].mineFlag==1)
+                    if(table[i][j+1].mineFlag==true)
                         num++;
                 if(i>0 and j>0)
-                    if(table[i-1][j-1].mineFlag==1)
+                    if(table[i-1][j-1].mineFlag==true)
                         num++;
                 if(i>0 and j<6)
-                    if(table[i-1][j+1].mineFlag==1)
+                    if(table[i-1][j+1].mineFlag==true)
                         num++;
                 if(i<6 and j>0)
-                    if(table[i+1][j-1].mineFlag==1)
+                    if(table[i+1][j-1].mineFlag==true)
                         num++;
                 if(i<6 and j<6)
-                    if(table[i-1][j-1].mineFlag==1)
+                    if(table[i+1][j+1].mineFlag==true)
                         num++;
                 table[i][j].mines = num;
             }
@@ -107,24 +107,34 @@ class minesweeper
 
     void checkZ(int i,int j)//检查展开格子
     {
-        if(table[i][j].mines==0 && table[i][j].openFlag==0 && table[i][j].mineFlag==0)
+        if(table[i][j].mineFlag==true)
+            return;
+        if(table[i][j].mines==0  )
         {
             if(i>0)
-                open(i - 1, j);
+                if(table[i-1][j].mineFlag==0 && table[i-1][j].openFlag==false)
+                    open(i - 1, j);
             if(i<6)
-                open(i + 1, j);
+                if(table[i+1][j].mineFlag==0&& table[i+1][j].openFlag==false)
+                    open(i + 1, j);
             if(j>0)
-                open(i, j - 1);
+                if(table[i][j-1].mineFlag==0&& table[i][j-1].openFlag==false)
+                    open(i, j - 1);
             if(j<6)
-                open(i, j + 1);
+                if(table[i][j+1].mineFlag==0&& table[i][j+1].openFlag==false)
+                    open(i, j + 1);
             if(i>0 and j>0)
-                open(i - 1, j - 1);
+                if(table[i-1][j-1].mineFlag==0&& table[i-1][j-1].openFlag==false)
+                    open(i - 1, j - 1);
             if(i>0 and j<6)
-                open(i - 1, j + 1);
+                if(table[i-1][j+1].mineFlag==0&& table[i-1][j+1].openFlag==false)
+                    open(i - 1, j + 1);
             if(i<6 and j>0)
-                open(i + 1, j - 1);
+                if(table[i+1][j-1].mineFlag==0&& table[i+1][j-1].openFlag==false)
+                    open(i + 1, j - 1);
             if (i < 6 and j < 6)
-                open(i + 1, j + 1);
+                if(table[i+1][j+1].mineFlag==0&& table[i+1][j+1].openFlag==false)
+                    open(i + 1, j + 1);
         }
     }
     void check(int i, int j)    //检查格子
@@ -136,24 +146,33 @@ class minesweeper
             gameState = false;
             return;
         }
-        if (table[i][j].mines == 0 && table[i][j].openFlag == 0)
+        if (table[i][j].mines == 0 )
         {
-            if (i > 0)
-                open(i - 1, j);
-            if (i < 6)
-                open(i + 1, j);
-            if (j > 0)
-                open(i, j - 1);
-            if (j < 6)
-                open(i, j + 1);
-            if (i > 0 and j > 0)
-                open(i - 1, j - 1);
-            if (i > 0 and j < 6)
-                open(i - 1, j + 1);
-            if (i < 6 and j > 0)
-                open(i + 1, j - 1);
+           
+             if(i>0)
+                if(table[i-1][j].mineFlag==0 && table[i-1][j].openFlag==false)
+                    open(i - 1, j);
+            if(i<6)
+                if(table[i+1][j].mineFlag==0&& table[i+1][j].openFlag==false)
+                    open(i + 1, j);
+            if(j>0)
+                if(table[i][j-1].mineFlag==0&& table[i][j-1].openFlag==false)
+                    open(i, j - 1);
+            if(j<6)
+                if(table[i][j+1].mineFlag==0&& table[i][j+1].openFlag==false)
+                    open(i, j + 1);
+            if(i>0 and j>0)
+                if(table[i-1][j-1].mineFlag==0&& table[i-1][j-1].openFlag==false)
+                    open(i - 1, j - 1);
+            if(i>0 and j<6)
+                if(table[i-1][j+1].mineFlag==0&& table[i-1][j+1].openFlag==false)
+                    open(i - 1, j + 1);
+            if(i<6 and j>0)
+                if(table[i+1][j-1].mineFlag==0&& table[i+1][j-1].openFlag==false)
+                    open(i + 1, j - 1);
             if (i < 6 and j < 6)
-                open(i + 1, j + 1);
+                if(table[i+1][j+1].mineFlag==0&& table[i+1][j+1].openFlag==false)
+                    open(i + 1, j + 1);
         }
     }
 
