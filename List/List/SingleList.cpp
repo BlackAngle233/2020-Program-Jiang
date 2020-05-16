@@ -1,94 +1,80 @@
 ﻿#include <iostream>
 #include "SingleList.h"
+using namespace std;
 
 
-struct Node
+#include "SingleList.h"
+
+MyList::MyList(void)
 {
-	Node* next = nullptr;
-	int value;
-};
-Node* head, *ptr, *d, a, b, c;
-
-
-void create();
-void erase();
-void insert(int i, int n);
-int find(int i);
-void remove(int i);
-void print();
-
-void erase()
-{
-	ptr = head;
-	while (ptr->next != NULL)
-	{
-		d = ptr;
-		ptr = ptr->next;
-		delete d;
-	}
+	m_phead = NULL;
+	m_ptemp = NULL;
 }
-void create()
+
+
+MyList::MyList(void)
 {
-	head = NULL;
-	head = new Node;
-	ptr = head;
-	int i = 0;
-	while (ptr->next)
+	//DestroyList(m_phead);
+}
+
+void MyList::CreatList()
+{
+	m_phead = new Node;
+	m_phead->next = NULL;
+}
+
+void MyList::InsertList(int nodedata)
+{
+	Node *t = new Node;
+	t->next = m_phead->next;
+	m_phead->next = t;
+	t->data = nodedata;
+}
+
+
+
+
+Node * MyList::SearchList(int finddata)
+{
+	m_ptemp = m_phead;
+	m_ptemp = m_ptemp->next;
+	while (m_ptemp)
 	{
-		cout << "请输入值:" << endl;
-		cin >> ptr->value;
-		ptr->next = new Node;
-		ptr = ptr->next;
-		i++;
-		if (i = 4)
+		if (m_ptemp->data == finddata)
 		{
-			return;
+			return m_ptemp;
 		}
+		m_ptemp = m_ptemp->next;
+	}
+	return NULL;
+}
+
+void MyList::RemoveList(Node * pfind)
+{
+	m_ptemp = m_phead;
+	if (pfind->next == NULL)
+	{
+		while (m_ptemp->next != pfind)
+			m_ptemp = m_ptemp->next;
+		m_ptemp->next = pfind->next;
+		delete pfind;
+	}
+	else
+	{
+		Node *t = pfind->next;
+		pfind->data = t->data;
+		pfind->next = t->next;
+		delete t;
 	}
 }
 
-int find(int i)//找出第i位的值
+void MyList::PrintList(Node *head)
 {
-	ptr = head;
-	int m = 1;
-	while (m < i)
+	Node *p = NULL;
+	while (head)
 	{
-		ptr = ptr->next;
+		p = head;
+		head = head->next;
+		cout << p->data;
 	}
-	return ptr->value;
 }
-
-void remove(int i)
-{
-	int m = 1;
-	while (m < i)
-	{
-		ptr = ptr->next;
-	}
-	d = ptr;
-	ptr = ptr->next;
-	delete d;
-}
-void print()
-{
-	ptr = head;
-	do
-	{
-		cout << ptr->value << '/t' << endl;
-		ptr = ptr->next;
-	} while (ptr != NULL);
-}
-
-void insert(int i, int n)//值n放在第i位
-{
-	Node *q = new Node;
-	q->value = n;
-	ptr = head;
-	int m = 1;
-	while (m < i - 1)
-		ptr = ptr->next;
-	q->next = ptr->next;
-	ptr->next = q->next;
-}
-
-
