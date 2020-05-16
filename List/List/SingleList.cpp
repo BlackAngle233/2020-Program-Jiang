@@ -79,4 +79,15 @@ void SingleList::print(SingleList list)
 	}
 }
 
+SingleList::~SingleList()
+{
+	
+
+	while (head->next != nullptr) {
+		delete[] head;
+		head = head->next;
+		
+	}
+}
+
 

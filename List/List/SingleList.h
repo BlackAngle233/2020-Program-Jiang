@@ -16,6 +16,7 @@ public:
 	void removepos(int pos, SingleList list);
 	void removenum(int num, SingleList list);
 	void print(SingleList list);
+	~SingleList();
 };
 
 
