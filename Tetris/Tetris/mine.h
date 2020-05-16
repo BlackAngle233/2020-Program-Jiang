@@ -10,6 +10,7 @@ using namespace std;
 enum Type { easy, middle, hard ,sellfsetting};
 class mine1 {
 public:
+
 	int  block[32][32] = { 0 };
 	bool  mine[32][32] = { false };
 	bool  isClick[32][32] = { false };

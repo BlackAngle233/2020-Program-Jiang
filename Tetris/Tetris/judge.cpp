@@ -55,7 +55,8 @@ void judge()
 			GetCursorPos(&p);
 			HWND h = GetForegroundWindow();
 			ScreenToClient(h, &p);
-			if (!isclick) {
+			if (!isclick) 
+			{
 				mineproduce->mine[p.y / 16][p.x / 16] = false;
 				mineproduce->Search(p.x / 16, p.y / 16, row, line);
 				mineproduce->isClick[p.y / 16][p.x / 16] = true;
@@ -73,7 +74,8 @@ void judge()
 
 			mineproduce->Born(row, line);
 		
-			if (mineproduce->mine[p.y / 16][p.x / 16]) {
+			if (mineproduce->mine[p.y / 16][p.x / 16]) 
+			{
 				mineproduce->showall(row, line);
 				system("cls");
 				mineproduce->Born(row, line);

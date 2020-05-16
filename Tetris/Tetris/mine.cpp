@@ -2,8 +2,9 @@
 #include "pch.h"
 #include "mine.h"
 #include <ctime>
-
+#include<vector>
 using namespace std;
+
 void mine1::Search(int x, int y, int maxx, int maxy)
 {
 	if (x <= maxx && y <= maxy && x >= 0 && y >= 0 && mine1::mine[y][x] == false && mine1::isClick[y][x] == false)
@@ -45,18 +46,50 @@ void mine1::Getnum(int maxx, int maxy)
 
 void mine1::Spawnmine(int maxx, int maxy, int minenum)
 {
-	srand((int)time(0));
-	for (int a = 0; a < minenum; a++) {
-		int e = rand() % (maxx - 1);
-		int f = rand() % (maxy - 1);
-		mine1::mine[e][f] = true;
+	class  point
+	{
+	public:
+		int x;
+		int y;
+		point(int xx, int yy)
+		{
+		x = xx;
+		y = yy;
+		}
 	};
+
+	point*points[1500];
+	int c = 0;
+	for (int a = 0; a < maxx; a++)
+		for (int b = 0; b < maxy; b++) {
+			points[c] = new point(a, b);
+			c++;
+		}
+	srand((int)time(0));
+	
+	int all = maxx * maxy - 1;
+	while (minenum > 0) 
+	{
+		
+		int e = rand() % (all);
+
+
+		mine1::mine[points[e]->x][points[e]->y] = true;
+
+		swap(points[e], points[all]);
+		all--;
+		minenum--;
+	}
+		
+	
 };
 
 void mine1::Born(int maxx, int maxy)
 {
-	for (int a = 0; a < maxx; a++) {
-		for (int b = 0; b < maxy; b++) {
+	for (int a = 0; a < maxx; a++) 
+	{
+		for (int b = 0; b < maxy; b++) 
+		{
 
 
 			if (!mine1::isClick[a][b])
