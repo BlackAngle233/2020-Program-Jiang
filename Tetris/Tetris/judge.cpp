@@ -12,13 +12,14 @@ void judge()
 	int minenum;
 	bool isclick = false;
 	mine1 *mineproduce = new mine1();
-	cout << "输入难度 0代表easy 1代表middle 2代表hard" << endl;
+	cout << "输入难度 0代表easy 1代表middle 2代表hard，3代表自己设定难度" << endl;
 	cin >> a;
 	switch (a)
 	{
 	case(0):d = easy; break;
 	case(1): d = middle; break;
 	case(2):d = hard; break;
+	case(3):d = sellfsetting; break;
 	}
 	if (d == easy)
 	{
@@ -28,9 +29,15 @@ void judge()
 	{
 		row = 16; line = 16; minenum = 160;
 	}
-	else
+	else if(d==hard)
 	{
 		row = 32; line = 32; minenum = 640;
+	}
+	else
+	{
+		cin >> row;
+		cin >> line;
+		cin >> minenum;
 	}
 	mineproduce->Spawnmine(row, line, minenum);
 
@@ -49,8 +56,11 @@ void judge()
 			HWND h = GetForegroundWindow();
 			ScreenToClient(h, &p);
 			if (!isclick) {
-				mineproduce->isClick[p.y / 16][p.x / 16] = true;
 				mineproduce->mine[p.y / 16][p.x / 16] = false;
+				mineproduce->Search(p.x / 16, p.y / 16, row, line);
+				mineproduce->isClick[p.y / 16][p.x / 16] = true;
+				
+
 				mineproduce->Getnum(row, line);
 				isclick = true;
 			}
@@ -58,12 +68,11 @@ void judge()
 			mineproduce->Search(p.x / 16, p.y / 16, row, line);
 			mineproduce->isClick[p.y / 16][p.x / 16] = true;
 
-			/*Search(p.y / 17, p.x / 16, 8, 8);*/
-			cout << p.y / 16 << " " << p.x / 16 << " " << 1 << endl;
+		
 			system("cls");
 
 			mineproduce->Born(row, line);
-
+		
 			if (mineproduce->mine[p.y / 16][p.x / 16]) {
 				mineproduce->showall(row, line);
 				system("cls");

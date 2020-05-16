@@ -7,7 +7,7 @@
 //#include <ctime>
 using namespace std;
 
-enum Type { easy, middle, hard };
+enum Type { easy, middle, hard ,sellfsetting};
 class mine1 {
 public:
 	int  block[32][32] = { 0 };
