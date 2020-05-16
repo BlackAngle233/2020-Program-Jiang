@@ -1,0 +1,5 @@
+﻿  Mystring.cpp
+  Mystring1.cpp
+c:\users\40390\source\repos\mystring\mystring\mystring1.cpp(117): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码...
+  Mystring.vcxproj -> C:\Users\40390\source\repos\Mystring\Debug\Mystring.exe
