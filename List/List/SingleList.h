@@ -15,6 +15,7 @@ public:
 	Node* SearchList(int finddata);
 	void RemoveList(Node * pfind);
 	void PrintList(Node *head);
+	~MyList(void);
 private:
 	Node* m_phead;   
 	Node* m_ptemp;   
