@@ -28,6 +28,7 @@ MyString::MyString(const char * p)
 
 MyString::~MyString()
 {
+	buff_.~shared_ptr();
 }
 
 MyString::MyString(const MyString & other)
