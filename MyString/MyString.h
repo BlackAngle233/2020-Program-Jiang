@@ -18,6 +18,7 @@ public:
 	MyString(const char* p);
 	MyString(const MyString& other);	//复制构造函数
 	MyString& operator = (MyString&& other);	//移动构造函数
+	MyString& operator = (const MyString& other);
 	~MyString(){}
 	bool empty() const { if (buff_->length == 0)return true;else return false; }
 	size_t length() const { return buff_->length; }

@@ -41,6 +41,19 @@ MyString& MyString::operator=(MyString&& other) {
 	res.buff_ = std::shared_ptr<Buf >(b);
 	return res;
 }
+
+MyString& MyString::operator = (const MyString& other) {
+	MyString res;
+	char* p_;
+	int i = 0;
+	while (other.buff_->p + i) {
+		*(p_ + i) = *(other.buff_->p + i);
+		i++;
+	}
+	Buf* b = new Buf{ other.buff_->length,p_ };
+	res.buff_ = std::shared_ptr<Buf >(b);
+	return res;
+}
 MyString& MyString::operator+(const MyString& other) {
 	MyString res;
 	char* p_;
