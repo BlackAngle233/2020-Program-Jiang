@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\78579\source\repos\string\string\string.h(39): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\78579\source\repos\string\string\string.h(115): warning C4172: 返回局部变量或临时变量的地址: new_string
+  String.vcxproj -> C:\Users\78579\source\repos\String\x64\Debug\String.exe
