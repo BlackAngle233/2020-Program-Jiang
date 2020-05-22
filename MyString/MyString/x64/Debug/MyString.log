@@ -1,0 +1,4 @@
+﻿  MyString.cpp
+c:\users\sqjyf\source\repos\mystring\mystring\mystring.cpp(7): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+c:\users\sqjyf\source\repos\mystring\mystring\mystring.h(26): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  MyString.vcxproj -> C:\Users\SQJYF\source\repos\MyString\x64\Debug\MyString.exe
