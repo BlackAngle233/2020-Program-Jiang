@@ -17,6 +17,7 @@ public:
 	MyString(char r);
 	MyString(const char* p);
 	MyString(const MyString& other);	//复制构造函数
+	MyString(MyString&& other) :buff_(other.buff_) { other.buff_->length = 0;other.buff_->p = nullptr; }
 	MyString& operator = (MyString&& other);	//移动构造函数
 	MyString& operator = (const MyString& other);
 	~MyString(){}
