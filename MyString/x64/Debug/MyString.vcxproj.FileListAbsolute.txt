@@ -1,0 +1,2 @@
+D:\VS2019 code\GitHub\2020-Program-Jiang\MyString\x64\Debug\MyString.exe
+D:\VS2019 code\GitHub\2020-Program-Jiang\MyString\x64\Debug\MyString.pdb

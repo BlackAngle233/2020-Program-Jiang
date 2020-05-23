@@ -1,0 +1,4 @@
+﻿  MyString.cpp
+D:\VS2019 code\GitHub\2020-Program-Jiang\MyString\MyString.cpp(52): warning C4172: 返回局部变量或临时变量的地址: res
+D:\VS2019 code\GitHub\2020-Program-Jiang\MyString\MyString.cpp(68): warning C4172: 返回局部变量或临时变量的地址: res
+  MyString.vcxproj -> D:\VS2019 code\GitHub\2020-Program-Jiang\MyString\x64\Debug\MyString.exe

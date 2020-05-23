@@ -24,4 +24,5 @@ public:
 	bool empty() const { if (buff_->length == 0)return true;else return false; }
 	size_t length() const { return buff_->length; }
 	MyString& operator +(const MyString& other);
+	void print();
 };
