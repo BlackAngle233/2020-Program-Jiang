@@ -1,0 +1,4 @@
+﻿  string.cpp
+C:\Users\zicheng\Desktop\github\2020-Program-Jiang\string\string\string.cpp(19,17): warning C4305: “=”: 从“int”到“char”截断
+C:\Users\zicheng\Desktop\github\2020-Program-Jiang\string\string\string.cpp(19,13): warning C4309: “=”: 截断常量值
+  string.vcxproj -> C:\Users\zicheng\Desktop\github\2020-Program-Jiang\string\Debug\string.exe
