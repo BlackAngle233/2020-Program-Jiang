@@ -12,7 +12,7 @@ int main()
 	Complex c = Complex(1, 1);
 	cout << &c <<" 232"<< endl;
 	//cout << c;
-	c = b;
+	c += b;
 	cout << c;
 	
 }
