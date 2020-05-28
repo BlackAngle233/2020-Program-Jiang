@@ -1,0 +1,2 @@
+D:\VS2019 code\GitHub\2020-Program-Jiang\Complex\Debug\Complex.exe
+D:\VS2019 code\GitHub\2020-Program-Jiang\Complex\Debug\Complex.pdb
