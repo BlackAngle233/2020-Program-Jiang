@@ -1,0 +1,6 @@
+﻿  Complex.cpp
+  main.cpp
+  正在生成代码...
+f:\cppcode\2020-program-jiang\complex\complex\complex.cpp(44): warning C4172: 返回局部变量或临时变量的地址: nb
+f:\cppcode\2020-program-jiang\complex\complex\complex.cpp(55): warning C4172: 返回局部变量或临时变量的地址: nb
+  Complex.vcxproj -> F:\CPPcode\2020-Program-Jiang\Complex\Debug\Complex.exe

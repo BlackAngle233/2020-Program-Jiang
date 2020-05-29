@@ -5,12 +5,12 @@ using namespace std;
 
 MyString::MyString() {
 	Buf* b = new Buf{0,nullptr};
-	buff_.reset(b);
+	buff_ = std::shared_ptr<Buf >(b);
 }
 
 MyString::MyString(char c) {
 	Buf* b = new Buf{ 1,&c };
-	buff_.reset(b);
+	buff_ = std::shared_ptr<Buf >(b);
 }
 
 MyString::MyString(const char* p) {
@@ -35,17 +35,17 @@ MyString::MyString(const MyString& other) {
 	buff_.reset(b);
 }
 
-MyString& MyString::operator=(const MyString& other) {
-	char* pe = new char();
-	int i = 0;
-	while (other.buff_->p + i) {
-		*(pe + i) = *(other.buff_->p + i);
-		i++;
-	}
-	buff_->length = i;
-	buff_->p = pe;
-	return *this;
-}
+//MyString& MyString::operator=(const MyString& other) {
+//	char* pe = new char();
+//	int i = 0;
+//	while (other.buff_->p + i) {
+//		*(pe + i) = *(other.buff_->p + i);
+//		i++;
+//	}
+//	buff_->length = i;
+//	buff_->p = pe;
+//	return *this;
+//}
 
 MyString::~MyString() {
 
@@ -58,13 +58,14 @@ MyString::MyString(MyString&& other)
 	other.buff_->p = nullptr;
 }
 
-MyString& MyString::operator=(MyString&& other) {
-	std::shared_ptr<Buf > tmp;
-	tmp = std::move(buff_);
-	buff_ = std::move(other.buff_);
-	other.buff_ = std::move(tmp);
-	return *this;
-}
+//MyString& MyString::operator=(MyString&& other) {
+//	cout << *(other.buff_->p);
+//	std::shared_ptr<Buf > tmp;
+//	tmp = std::move(buff_);
+//	buff_ = std::move(other.buff_);
+//	other.buff_ = std::move(tmp);
+//	return *this;
+//}
 
 MyString& MyString::operator +(const MyString& other) {
 	buff_->length = buff_->length + other.buff_->length;
@@ -77,7 +78,7 @@ MyString& MyString::operator +(const MyString& other) {
 }
 
 bool MyString::empty() const {
-	if (!buff_)
+	if (!buff_||buff_->p)
 		return true;
 	else
 		return buff_->length > 0 ? false : true;
@@ -94,7 +95,7 @@ void MyString::print() {
 	else {
 		int i = 0;
 		cout << "³¤¶È£º" << buff_->length<<endl;
-		while (buff_->p+i) {
+		while (buff_->p+i!=nullptr) {
 			cout << *(buff_->p + i) << endl;
 			i++;
 		}

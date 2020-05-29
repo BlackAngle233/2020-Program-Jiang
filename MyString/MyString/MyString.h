@@ -14,10 +14,10 @@ public:
 	MyString(const char* p);
 	~MyString();
 	MyString(const MyString& other);//拷贝构造
-	MyString& operator=(const MyString& other);//拷贝赋值
+	//MyString& operator=(const MyString& other);//拷贝赋值
 
 	MyString(MyString&& other);//移动构造
-	MyString& operator=(MyString&& other);//移动赋值
+	//MyString& operator=(MyString&& other);//移动赋值
 	bool empty() const;
 	size_t length()const;
 	MyString& operator+(const MyString& other);
