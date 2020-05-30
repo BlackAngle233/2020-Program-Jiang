@@ -28,9 +28,19 @@ Complex& Complex::operator++() {
 	_r++;
 	return *this;
 }
+Complex& Complex::operator++(int) {
+	Complex temp = *this;
+	_r++;
+	return temp;
+}
 Complex& Complex::operator--() {
 	_r--;
 	return *this;
+}
+Complex& Complex::operator--(int) {
+	Complex temp = *this;
+	_r--;
+	return temp;
 }
 Complex& Complex::operator+=(Complex& other) {
 	_r += other.getR();

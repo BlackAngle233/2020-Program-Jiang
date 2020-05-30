@@ -23,7 +23,10 @@ public:
 	friend Complex operator / (Complex& a, Complex& b);
 
 	Complex& operator ++();
+	Complex& operator ++(int);
 	Complex& operator --();
+	Complex& operator --(int);
+
 
 	Complex& operator +=(Complex& other);
 	Complex& operator -=(Complex& other);
