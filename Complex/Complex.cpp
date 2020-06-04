@@ -68,3 +68,12 @@ Complex& Complex::operator/=(Complex& other) {
 	_i = i;
 	return *this;
 }
+
+void Complex::printf(){
+	if (_i > 0)
+		std::cout << _r << '+' << _i << 'i' << std::endl;
+	else if (_i == 0)
+		std::cout << _r << std::endl;
+	else
+		std::cout << _r << '-' << -_i << 'i' << std::endl;
+}
