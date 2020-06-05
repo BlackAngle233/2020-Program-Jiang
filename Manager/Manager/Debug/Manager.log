@@ -1,0 +1,7 @@
+﻿  Manager.cpp
+c:\users\sqjyf\source\repos\manager\manager\manager.h(19): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\sqjyf\source\repos\manager\manager\manager.h(28): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\sqjyf\source\repos\manager\manager\manager.h(62): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\sqjyf\source\repos\manager\manager\manager.h(79): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\sqjyf\source\repos\manager\manager\manager.h(93): warning C4018: “<”: 有符号/无符号不匹配
+  Manager.vcxproj -> C:\Users\SQJYF\source\repos\Manager\Debug\Manager.exe
