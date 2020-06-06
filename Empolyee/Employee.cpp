@@ -1,5 +1,5 @@
 #include"Employee.h"
-
+#include<queue>
 
 Employee::Employee(string name) {
 	name_ = name;
@@ -14,24 +14,36 @@ Manager::Manager(string name):Employee(name) {
 }
 
 void Manager::addManager(Manager* e) {
-	this->getEmpls().push_back(e);
+	empls_.push_back(e);
 }
 
-void Manager::showSubtree(string space) {
-	if (!this->getEmpls().empty()) {
-		for (int i = 0;i < this->getEmpls().size();i++) {
-			std::cout << space << this->getEmpls()[i]->getName() << std::endl;
-			this->showSubtree("\t"+space);
-		}
-	}
-}
+//void Manager::showSubtree(string space) {
+//	if (!empls_.empty()) {
+//		for (int i = 0;i < empls_.size();i++) {
+//			std::cout << empls_[i]->getName() << space;
+//		}
+//		std::cout << std::endl;
+//		for (int i = 0;i < empls_.size();i++) {
+//
+//		}
+//	}
+//}
 
 void Manager::PrintReportLines() {
+	std::cout << this->getName() << std::endl;
+	queue<Manager* > q;
 	if (empls_.empty())
 		return;
 	else {
-		std::cout << this->getName() << std::endl;
-		this->showSubtree("\t");
+		//this->showSubtree("\t");
+		q.push(this);
+		while (!q.empty()) {
+			Manager* temp = q.pop();
+			for (int i = 0;i < temp->empls_.size();i++) {
+				std::cout << temp->empls_[i]->getName()<<"\t";
+				q.push(temp->empls_[i]);
+			}
+		}
 	}
 }
 
@@ -61,7 +73,7 @@ Employee* FindLeastCommonManagers(Manager* root, const string& name1, const stri
 		{
 			if (isHave(item->getEmpls()[i], name1) && isHave(item->getEmpls()[i], name2))
 			{
-				item = item->getEmpls[i];
+				item = item->getEmpls()[i];
 				flag = true;
 				break;
 			}
