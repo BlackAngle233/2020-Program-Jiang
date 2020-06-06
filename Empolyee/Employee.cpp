@@ -59,9 +59,9 @@ Employee* FindLeastCommonManagers(Manager* root, const string& name1, const stri
 		flag = false;
 		for (int i = 0; i < item->getEmpls().size(); ++i)
 		{
-			if (isHave((Manager*)item->getEmpls()[i], name1) && isHave((Manager*)item->getEmpls()[i], name2))
+			if (isHave(item->getEmpls()[i], name1) && isHave(item->getEmpls()[i], name2))
 			{
-				item = (Manager*)item->getEmpls[i];
+				item = item->getEmpls[i];
 				flag = true;
 				break;
 			}
