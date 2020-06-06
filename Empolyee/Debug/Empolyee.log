@@ -1,0 +1,11 @@
+﻿  Employee.cpp
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.cpp(22,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.cpp(40,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.cpp(44,47): error C2668: “isHave”: 对重载函数的调用不明确
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.cpp(38,6): message : 可能是“bool isHave(Manager *,const std::string)”
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.h(24,6): message : 或    “bool isHave(Manager *,const std::string &)”
+D:\VS2019 code\GitHub\2020-Program-Jiang\Empolyee\Employee.cpp(44,47): message : 尝试匹配参数列表“(_Ty, const std::string)”时
+          with
+          [
+              _Ty=Manager *
+          ]
