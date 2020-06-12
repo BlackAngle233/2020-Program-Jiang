@@ -27,7 +27,11 @@ void test()
 		CEO->PrintReportLines();
 			
 		Employee* a = FindLeastCommonManagers(CEO, "salesExecutive1", "Head Sales");
-		cout<<" FindLeastCommonManagers:(salesExecutive1, Head Sales): "<<a->getName()<<endl;
+
+		if (nullptr == a)
+			cout << "no common manager" << endl;
+		else
+		    cout<<" FindLeastCommonManagers:(salesExecutive1, Head Sales): "<<a->getName()<<endl;
 }
 int main()
 {

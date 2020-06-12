@@ -22,5 +22,5 @@ public:
 };
 
 Employee* FindLeastCommonManagers(Employee* root, const string& name1, const string& name2);
-bool find(Manager* root, const string& name);
+Employee* find(Manager* root, const string& name);
 
