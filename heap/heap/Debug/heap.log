@@ -1,0 +1,18 @@
+﻿  heap.cpp
+c:\users\40390\source\repos\heap\heap\heap.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
+  c:\users\40390\source\repos\heap\heap\heap.cpp(14): note: 编译 类 模板 成员函数 "BinaryHeap<int>::BinaryHeap(const std::vector<int,std::allocator<_Ty>> &)" 时
+          with
+          [
+              _Ty=int
+          ]
+  c:\users\40390\source\repos\heap\heap\heap.cpp(63): note: 参见对正在编译的函数 模板 实例化“BinaryHeap<int>::BinaryHeap(const std::vector<int,std::allocator<_Ty>> &)”的引用
+          with
+          [
+              _Ty=int
+          ]
+  c:\users\40390\source\repos\heap\heap\heap.cpp(63): note: 参见对正在编译的 类 模板 实例化 "BinaryHeap<int>" 的引用
+c:\users\40390\source\repos\heap\heap\heap.cpp(42): warning C4018: “<”: 有符号/无符号不匹配
+  c:\users\40390\source\repos\heap\heap\heap.cpp(37): note: 编译 类 模板 成员函数 "void BinaryHeap<int>::buildHeap(void)" 时
+  c:\users\40390\source\repos\heap\heap\heap.cpp(25): note: 参见对正在编译的函数 模板 实例化“void BinaryHeap<int>::buildHeap(void)”的引用
+c:\users\40390\source\repos\heap\heap\heap.cpp(49): warning C4018: “<”: 有符号/无符号不匹配
+  heap.vcxproj -> C:\Users\40390\source\repos\heap\Debug\heap.exe

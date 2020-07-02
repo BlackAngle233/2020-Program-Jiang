@@ -1,0 +1,5 @@
+﻿  leetcode.cpp
+c:\users\40390\source\repos\leetcode\leetcode\leetcode.cpp(21): warning C4114: 多次使用同一类型限定符
+  c:\users\40390\source\repos\leetcode\leetcode\leetcode.cpp(183): note: 参见对正在编译的 类 模板 实例化 "BinarySearchTree<Comparable>" 的引用
+c:\users\40390\source\repos\leetcode\leetcode\leetcode.cpp(129): warning C4715: “BinarySearchTree<int>::findParent”: 不是所有的控件路径都返回值
+  leetcode.vcxproj -> C:\Users\40390\source\repos\leetcode\Debug\leetcode.exe
