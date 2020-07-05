@@ -1,24 +1,32 @@
 #include <iostream>
 #include "SingleList.h"
 
+using namespace std;
+
 int main()
 {
-	int numList[] = { 1,2,3,4,5,4 };
-	SingleList* list = create(numList,6);
-	print(list);
+	int num[] = { 1,2,3,4,5,4,5,1 };
+	int size = 8;
 
-	//在最后插入一个值为3的结点
-	insert(list, 3);
-	print(list);
+	SingleList* test = new SingleList(num, size);
+	test->print();
 
-	// 找到第一个值为4的结点并且删除它
-	remove(list, find(list, 4)) ;
-	print(list);
+	test->insert(2);
+	test->print();
 
-	// 删除所有值为3的结点
-	remove(list, 3);
-	print(list);
+	SingleList::Node* testNode = test->find(3);
 
-	// 删除单链表
-	erase(list);
+	test->remove(testNode);
+	test->print();
+
+	test->remove(2);
+	test->print();
+
+	test->remove(4);
+	test->print();
+
+	test->erase();
+
+	int t;
+	cin >> t;
 }

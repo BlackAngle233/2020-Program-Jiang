@@ -1,45 +1,243 @@
 ﻿#include <iostream>
 #include "Matrix.h"
 
-void test() 
+Matrix::Matrix(const int& r, const int& c, const vector<double>& values)
 {
-	int a[4][4]; int b[4][4];
-
-    std::cout << "-------------------------------" << endl;
-	std::cout << "请输入矩阵A:" << endl;
-	inputMartix4x4(a);
-
-    std::cout << "-------------------------------" << endl;
-	std::cout << "请输入矩阵B:" << endl;
-	inputMartix4x4(b);
-
-	std::cout << "-------------------------------" << endl;
-	std::cout << "A+B:" << endl;
-	Add(a, b);
-
-	std::cout << "-------------------------------" << endl;
-	std::cout << "A-B:" << endl;
-	Minus(a, b);
-
-	std::cout << "-------------------------------" << endl;
-	std::cout << "A*B:" << endl;
-	Multiple(a, b);
-
+	if (r == 0 || c == 0)    throw("wrong input");
+	row = r;
+	col = c;
+	for (int i = 0; i < row; ++i)
+	{
+		vector<double> tmp;
+		for (int j = 0; j < col; ++j)
+		{
+			tmp.push_back(values[j + i * col]);
+		}
+		m.push_back(tmp);
+	}
 }
 
-void lesson() {
-	Mat4 a;
-	Mat4 b;
-	initMat4(a);
-	initMat4(b);
-
-	Mat4 c = add(a, b);
-	print(c);
-}
-
-int main()
+Matrix::Matrix(const Matrix& m1)
 {
-    std::cout << "test:\n";
-	//test();
-	lesson();
+	if (this != &m1)
+	{
+		row = m1.row;
+		col = m1.col;
+		for (int i = 0; i < row; ++i)
+		{
+			vector<double> tmp;
+			for (int j = 0; j < col; ++j)
+			{
+				tmp.push_back(m1.m[i][j]);
+			}
+			m.push_back(tmp);
+		}
+	}
 }
+
+Matrix& Matrix::operator =(const Matrix& m)
+{
+	if (this != &m)
+	{
+		this->row = m.row;
+		this->col = m.col;
+		this->m.clear();
+		{
+			for (int i = 0; i < this->row; ++i)
+			{
+				vector<double> tmp;
+				for (int j = 0; j < this->col; ++j)
+				{
+					tmp.push_back(m.m[j][i]);
+				}
+				this->m.push_back(tmp);
+			}
+		}
+	}
+	return *this;
+}
+
+Matrix& Matrix::operator +(const Matrix& m)
+{
+	if (this->col == m.col && this->row == m.row)
+	{
+		for (int i = 0; i < row; ++i)
+		{
+			for (int j = 0; j < col; ++j)
+			{
+				this->m[i][j] += m.m[i][j];
+			}
+		}
+	}
+	else    throw("wrong addition");
+	return *this;
+}
+
+Matrix& Matrix::operator -(const Matrix& m)
+{
+	if (this->col == m.col && this->row == m.row)
+	{
+		for (int i = 0; i < row; ++i)
+		{
+			for (int j = 0; j < col; ++j)
+			{
+				this->m[i][j] -= m.m[i][j];
+			}
+		}
+	}
+	else    throw("wrong substraction");
+	return *this;
+}
+
+Matrix& Matrix::operator *(const Matrix& m)
+{
+	if (this->col == m.row)
+	{
+		vector<double> vtmp;
+		for (int i = 0; i < this->row; ++i)
+		{
+			for (int j = 0; j < m.col; ++j)
+			{
+				double itmp = 0;
+				for (int k = 0; k < col; ++k)    itmp += this->m[i][k] * m.m[k][j];
+				vtmp.push_back(itmp);
+			}
+		}
+		this->col = m.col;
+		this->m.clear();
+		for (int i = 0; i < this->row; ++i)
+		{
+			vector<double> tmp;
+			for (int j = 0; j < m.col; ++j)
+			{
+				tmp.push_back(vtmp[j + i * col]);
+			}
+			this->m.push_back(tmp);
+		}
+	}
+	else    throw("wrong multiplication");
+	return *this;
+}
+
+void Matrix::transposition()
+{
+	vector<double> values;
+	for (int i = 0; i < col; ++i)
+	{
+		for (int j = 0; j < row; ++j)
+		{
+			values.push_back(m[j][i]);
+		}
+	}
+	Matrix mtmp(col, row, values);
+	row = mtmp.row;
+	col = mtmp.col;
+	m.clear();
+	for (double i = 0; i < row; ++i)
+	{
+		vector<double> tmp;
+		for (int j = 0; j < col; ++j)
+		{
+			tmp.push_back(mtmp.m[i][j]);
+		}
+		m.push_back(tmp);
+	}
+	return;
+}
+
+void Matrix::print()
+{
+	for (int i = 0; i < row; ++i)
+	{
+		for (int j = 0; j < col; ++j)
+		{
+			cout << setw(10) << m[i][j];
+		}
+		cout << endl;
+	}
+}
+
+/*double Matrix::det()
+{
+	double det = 0;
+	if (col == row)
+	{
+		double* arr;
+		arr = new double(col);
+		for (int i = 0; i < col; ++i)
+		{
+			arr[i] = i;
+		}
+		do
+		{
+			int count = 0;
+			for (int i = 0; i < col; i++)
+			{
+				for (int j = i + 1; j < col; j++)
+				{
+					if (arr[i] > arr[j])
+					{
+						count += 1;
+					}
+				}
+			}
+			if ((count & 1) == 0)
+			{
+				double temp = 1;
+				for (int i = 0; i < row; i++)
+					temp *= m[i][arr[i]];
+				det += temp;
+			}
+			else
+			{
+				double temp = -1;
+				for (int i = 0; i < row; i++)
+					temp *= m[i][arr[i]];
+				det += temp;
+			}
+		} while (next_permutation(arr, arr + col));
+	}
+	else
+	{
+		throw("no det");
+	}
+	return det;
+}
+
+Matrix Matrix::inverse()
+{
+	if (det() == 0.0)
+	{
+		throw("no inverse");
+	}
+	vector<double> adjoint;
+	vector<double> tmp;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			tmp.clear();
+			for (int k = 0; k < row; k++)
+			{
+				for (int l = 0; l < col; l++)
+				{
+					if (k != i && l != j)    tmp.push_back(m[k][l]);
+				}
+			}
+			try
+			{
+				Matrix m1(row - 1, col - 1, tmp);
+				double n = m1.det() / det();
+				if ((i + j) & 1 != 0)    n = -n;
+				adjoint.push_back(n);
+			}
+			catch (const char* e)
+			{
+				cerr << e << endl;
+			}
+		}
+	}
+	Matrix result(col, row, adjoint);
+	result.transposition();
+	return result;
+}*/

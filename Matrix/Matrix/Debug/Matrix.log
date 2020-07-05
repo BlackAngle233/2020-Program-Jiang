@@ -1,3 +1,5 @@
 ﻿  Matrix.cpp
-D:\workspace\github\2020-Program-Jiang\Matrix\Matrix\Matrix.h(28,37): warning C4114:  多次使用同一类型限定符
-  Matrix.vcxproj -> D:\workspace\github\2020-Program-Jiang\Matrix\Debug\Matrix.exe
+  main.cpp
+  正在生成代码...
+D:\github\2020-Program-Jiang\Matrix\Matrix\Matrix.cpp(141,25): warning C4244: “参数”: 从“double”转换到“const unsigned int”，可能丢失数据
+  Matrix.vcxproj -> D:\github\2020-Program-Jiang\Matrix\Debug\Matrix.exe
