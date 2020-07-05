@@ -30,7 +30,7 @@ public:
 	void insert(Comparable && x) { insert(std::move(x), root); }
 	void remove(const Comparable & x) { remove(x, root); }
 	void read() { read(root); };
-	void makelist() { delete list; list = new BinaryNode(0,nullptr,nullptr); list1 = list; makelist(root); };
+	void makelist() { delete list; list = new BinaryNode(0, nullptr, nullptr); list1 = list; makelist(root); list1->right = list; list->left = list1; };
 
 	struct BinaryNode
 	{
