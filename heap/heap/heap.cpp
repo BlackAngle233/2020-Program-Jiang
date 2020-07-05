@@ -19,11 +19,11 @@ public:
 		buildHeap();
 	}
 	bool isEmpty() const { return currentSize == 0; }
-	const Comparable & findMin() const { return array[0]; };
+	const Comparable & findMin() const { if (currentSize > 1)return array[1]; else return -1; };
 	void insert(const Comparable & x) { 
 		array.resize(array.size() + 1);
 		array[currentSize++] = x; buildHeap(); };
-	void deleteMin() { array[currentSize] = array[0]; buildHeap();currentSize-- };
+	void deleteMin() { if (currentSize > 1) { array[currentSize] = array[1]; buildHeap(); currentSize-- } };
 	void deleteMin(Comparable & minItem);
 	void makeEmpty()
 	{
