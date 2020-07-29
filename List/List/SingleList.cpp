@@ -21,15 +21,14 @@ SingleList* create(int num[], int len) {
 }
 
 void erase(SingleList* list) {
-	SingleList::Node* head = list->head;
-	SingleList::Node* next = head->next;
-	while (next != nullptr) {
-		delete(head);
-		head = next;
-		next = head->next;
+	SingleList::Node* now = list->head;
+	SingleList::Node* next;
+	while (now != nullptr) {
+		next = now->next;
+		delete now;
+		now = next;
 	}
-	delete(head);
-	delete(list);
+	delete list;
 }
 
 void insert(SingleList* list, int value) {
@@ -42,30 +41,41 @@ void insert(SingleList* list, int value) {
 
 }
 
-SingleList::Node* find(SingleList* list,int value) {
-	SingleList::Node* head = list->head;
-	if (head->value = value) {
-		return head;
-	}
-	while (head->next != nullptr) {
-		head = head->next;
-		if (head->value == value)
-			return head;
+
+SingleList::Node* find(SingleList* list, int value) {
+	SingleList::Node* now = list->head;
+	while (now != nullptr) {
+		if (now->value == value)
+			return now;
+
+		now = now->next;
 	}
 	return nullptr;
 }
 
+
 void remove(SingleList* list, SingleList::Node* node) {
-	SingleList::Node* head = list->head;
-	SingleList::Node* last = list->head;
-	while (head!= nullptr) {
-		if (head == node) {
-			last->next = head->next;
-			delete(node);
-			return;
+	SingleList::Node* now= list->head;	
+	while (now != nullptr) {
+		if (now == node) {
+			list->head = now->next;
+			delete now;
+			break;
 		}
-		last = head;
-		head = head->next;
+		if (now->next == node) {
+			if (now->next->next != nullptr) {
+				SingleList::Node* tmp = now->next;
+				now->next = now->next->next;
+				delete tmp;
+			}
+			else
+			{
+				delete now->next;
+				now->next = nullptr;
+			}
+			break;
+		}	
+		now = now->next;
 	}
 }
 
@@ -77,14 +87,17 @@ void remove(SingleList* list, int value) {
 }
 
 void print(SingleList* list) {
+	if (list == nullptr) {
+		cout << "这是个空链表";
+		return;
+	}
 	SingleList::Node* node = list->head;
 	cout << "当前链表为:";
 	while (node != nullptr) {
 		cout << node->value;
-		if (node->next != nullptr) {
-			cout << "->";
-		}
 		node = node->next;
+		if (node != nullptr) 
+			cout << "->";
 	}
 	cout << endl;
 }

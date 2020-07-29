@@ -1,4 +1,5 @@
 #pragma once
+
 void print(int m[4][4]);
 
 void inputMartix4x4(int m[4][4]);
