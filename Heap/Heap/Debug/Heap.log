@@ -1,0 +1,74 @@
+﻿  Tree.cpp
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): error C2244: “BinaryHeap::insert”: 无法将函数定义与现有的声明匹配
+  f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): note: 参见“BinaryHeap::insert”的声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): note: 定义
+  f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): note: 'void BinaryHeap::insert(const Comparable &)'
+  f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): note: 现有声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(17): note: 'void BinaryHeap<Comparable>::insert(const Comparable &)'
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(26): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(26): error C2509: “move_down”: 成员函数没有在“BinaryHeap”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(40): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(40): error C2509: “deleteMin”: 成员函数没有在“BinaryHeap”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(48): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(7): note: 参见“BinaryHeap”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(48): error C2065: “Comparable”: 未声明的标识符
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(48): error C2065: “minItem”: 未声明的标识符
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(48): error C2761: “deleteMin”: 不允许重新声明成员
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(48): error C2448: “BinaryHeap<Comparable>::deleteMin”: 函数样式初始值设定项类似函数定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(59): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(59): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(59): error C2059: 语法错误:“<end Parse>”
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(59): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(59): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(73): error C2509: “print”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(83): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(83): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(83): error C2059: 语法错误:“{”
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(83): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(83): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(97): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(97): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(97): error C2059: 语法错误:“{”
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(97): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(97): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(111): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(111): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(111): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(111): error C2509: “insert”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(124): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(124): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(124): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(124): error C2509: “remove”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(144): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(144): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(144): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(144): error C2509: “contains”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(155): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(155): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(155): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(155): error C2509: “contains”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(169): error C2509: “clone”: 成员函数没有在“BinarySearchTree”中声明
+  f:\cppcode\2020-program-jiang\heap\heap\tree.h(54): note: 参见“BinarySearchTree”的声明
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(177): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(177): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(177): error C2059: 语法错误:“{”
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(177): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(177): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(188): error C2988: 不可识别的模板声明/定义
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(188): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(188): error C2059: 语法错误:“{”
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(188): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+f:\cppcode\2020-program-jiang\heap\heap\tree.cpp(188): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+  main.cpp
+  正在生成代码...
