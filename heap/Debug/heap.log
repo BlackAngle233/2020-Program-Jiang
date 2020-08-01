@@ -1,0 +1,79 @@
+﻿  heap.cpp
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): error C2244: “BinaryHeap::insert”: 无法将函数定义与现有的声明匹配
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17): message : 参见“BinaryHeap::insert”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): message : 定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): message : 'void BinaryHeap::insert(const Comparable &)'
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): message : 现有声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(17,46): message : 'void BinaryHeap<Comparable>::insert(const Comparable &)'
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(26,18): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(26,35): error C2509: “move_down”: 成员函数没有在“BinaryHeap”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(40,18): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(40,30): error C2509: “deleteMin”: 成员函数没有在“BinaryHeap”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(48,18): error C2955: “BinaryHeap”: 使用 类 模板 需要 模板 参数列表
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(7): message : 参见“BinaryHeap”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(48,28): error C2065: “Comparable”: 未声明的标识符
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(48,40): error C2065: “minItem”: 未声明的标识符
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(48,47): error C2761: “deleteMin”: 不允许重新声明成员
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(48,49): error C2448: “BinaryHeap<Comparable>::deleteMin”: 函数样式初始值设定项类似函数定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,11): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,47): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,47): error C2059: 语法错误:“<end Parse>”
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,47): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(59,47): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(73,48): error C2509: “print”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,11): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,60): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,60): error C2059: 语法错误:“{”
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,60): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(83,60): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,11): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,62): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,62): error C2059: 语法错误:“{”
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,62): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(97,62): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(111,47): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(111,47): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(111,47): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(111,68): error C2509: “insert”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(124,47): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(124,47): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(124,47): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(124,68): error C2509: “remove”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(144,49): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(144,49): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(144,49): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(144,75): error C2509: “contains”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(155,49): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(155,49): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(155,49): error C2143: 语法错误: 缺少“,”(在“&”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(155,69): error C2509: “contains”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(169,63): error C2509: “clone”: 成员函数没有在“BinarySearchTree”中声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.h(54): message : 参见“BinarySearchTree”的声明
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,11): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,91): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,91): error C2059: 语法错误:“{”
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,91): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(177,91): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,11): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,11): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,61): error C2988: 不可识别的模板声明/定义
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,61): error C2059: 语法错误:“{”
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,61): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\VS2019 code\GitHub\2020-Program-Jiang\heap\heap.cpp(188,61): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+  main.cpp
+  正在生成代码...
